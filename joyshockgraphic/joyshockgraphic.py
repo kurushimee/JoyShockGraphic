@@ -1,5 +1,5 @@
 import sys
-from joyshockgraphic.client import Client
+from client import Client
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
 
         # Initialize JSM client
         self.client = Client()
-        self.client.init_client()
+        self.client.init()
 
         # Connect button groups
         self.bgLibrary.buttonClicked.connect(self.handle_profile)

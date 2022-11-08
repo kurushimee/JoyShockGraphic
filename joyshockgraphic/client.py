@@ -17,9 +17,7 @@ class Client:
             and Process(p.info["pid"]).ppid() == proc_jsm.pid
         ])
 
-        await proc_jsm.wait()
-
-    def init_client(self):
+    def init(self):
         asyncio.run(self.__init())
 
     def send_command(self, commands):
