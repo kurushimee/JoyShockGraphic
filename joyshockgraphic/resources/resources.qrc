@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="prefix">
+    <file>icons/joyshockgraphic.ico</file>
+  </qresource>
+</RCC>
