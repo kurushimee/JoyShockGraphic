@@ -1,5 +1,4 @@
 import sys
-from client import Client
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
@@ -10,10 +9,6 @@ class MainWindow(QMainWindow):
         super().__init__()
         uic.loadUi("joyshockgraphic/resources/joyshockgraphic.ui", self)
 
-        # Initialize JSM client
-        self.client = Client()
-        self.client.init()
-
         # Connect button groups
         self.bgLibrary.buttonClicked.connect(self.handle_profile)
         self.bgLoadInput.buttonClicked.connect(self.load_input)
@@ -21,7 +16,7 @@ class MainWindow(QMainWindow):
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
     def handle_profile(self):
-        self.client.send_command('{"N = GYRO_OFF", "E = LCONTROL"}')
+        pass
 
     def load_input(self):
         pass

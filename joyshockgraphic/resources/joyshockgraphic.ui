@@ -450,7 +450,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>706</width>
-                   <height>1034</height>
+                   <height>1061</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1126,6 +1126,13 @@
                    </layout>
                   </item>
                   <item>
+                   <widget class="Line" name="line_60">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_22">
                     <item>
                      <widget class="QLabel" name="label_28">
@@ -1206,6 +1213,13 @@
                    </layout>
                   </item>
                   <item>
+                   <widget class="Line" name="line_61">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_23">
                     <item>
                      <widget class="QLabel" name="label_29">
@@ -1284,6 +1298,13 @@
                      </widget>
                     </item>
                    </layout>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line_62">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
                   </item>
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_24">
@@ -5578,6 +5599,58 @@
               <property name="text">
                <string>Rename command...</string>
               </property>
+              <attribute name="buttonGroup">
+               <string notr="true">bgConfig</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbAdd">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Choose display name for the command&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Add extra command</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">bgConfig</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_63">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbRemove">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Choose display name for the command&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Remove command</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">bgConfig</string>
+              </attribute>
              </widget>
             </item>
             <item>
@@ -5774,9 +5847,10 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="bgLoadInput"/>
-  <buttongroup name="bgLibrary"/>
-  <buttongroup name="bgPickBind"/>
   <buttongroup name="bgSwitchInput"/>
+  <buttongroup name="bgPickBind"/>
+  <buttongroup name="bgLibrary"/>
+  <buttongroup name="bgLoadInput"/>
+  <buttongroup name="bgConfig"/>
  </buttongroups>
 </ui>
