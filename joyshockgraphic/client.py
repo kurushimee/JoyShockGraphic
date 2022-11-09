@@ -7,7 +7,7 @@ class Client:
 
     async def __init(self):
         proc_jsm = await asyncio.subprocess.create_subprocess_exec(
-            "JoyShockMapper_x64/JoyShockMapper.exe")
+            "joyshockgraphic/JoyShockMapper_x64/JoyShockMapper.exe")
 
         # Go through every running process, append process if it's conhost.exe
         # and the parent process is JoyShockMapper.exe
@@ -22,7 +22,8 @@ class Client:
 
     def send_command(self, commands):
         subprocess.run([
-            "joyshockgraphic/scripts/send_command.bat",
+            "joyshockgraphic\\scripts\\send_command.bat",
             f"{self.pid_conhost}",
-            f"{commands}",
+            f"{commands}",  # Должен передавать аргумент в виде {"", ""}
+            # На самом деле передаёт {\"\", \"\"}, что ломает программу
         ])

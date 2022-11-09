@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
     def handle_profile(self):
-        pass
+        self.client.send_command('{"N = GYRO_OFF", "E = LCONTROL"}')
 
     def load_input(self):
         pass

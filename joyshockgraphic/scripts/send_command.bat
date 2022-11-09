@@ -17,4 +17,4 @@ echo Next >>temp.vbs
 echo %pid%
 echo %keysToSend%
 
-cscript //nologo temp.vbs & del temp.vbs
+@REM cscript //nologo temp.vbs & del temp.vbs
