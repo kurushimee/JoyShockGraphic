@@ -5,7 +5,6 @@ from PyQt5.QtWidgets import (
     QApplication,
     QMainWindow,
     QPushButton,
-    QListWidgetItem,
 )
 
 
@@ -18,6 +17,8 @@ class MainWindow(QMainWindow):
         self.dman = DManager()
         # Populate lwProfiles with already existing profiles
         self.populate_list()
+        # Enable profile specific buttons based on selection
+        self.lwProfiles.itemSelectionChanged.connect(self.selection_changed)
 
         # Connect button groups
         self.bgLibrary.buttonClicked.connect(self.handle_profile)
@@ -26,9 +27,21 @@ class MainWindow(QMainWindow):
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
     def populate_list(self):
+        self.lwProfiles.clear()
         for profile in self.dman.select("display_name", "profiles"):
             display_name = profile[0]
-            QListWidgetItem(display_name, self.lwProfiles)
+            self.lwProfiles.addItem(display_name)
+
+    def selection_changed(self):
+        if self.lwProfiles.currentItem().text() in [
+            x[0] for x in self.dman.select("display_name", "profiles")
+        ]:
+            condition = True
+        else:
+            condition = False
+        self.pbEdit.setEnabled(condition)
+        self.pbDelete.setEnabled(condition)
+        self.pbConfigure.setEnabled(condition)
 
     def handle_profile(self, sender: QPushButton):
         cond = sender.objectName()
@@ -63,8 +76,7 @@ class MainWindow(QMainWindow):
                 dlg.leDisplayName.text(),
                 dlg.leFileName.text(),
             )
-            # Append profile to lwProfiles
-            QListWidgetItem(dlg.leDisplayName.text(), self.lwProfiles)
+            self.populate_list()
 
     def edit(self):
         # Open profile creation dialog
@@ -83,6 +95,7 @@ class MainWindow(QMainWindow):
                 ),
                 (dlg.leDisplayName.text(), dlg.leFileName.text()),
             )
+            self.populate_list()
 
     def configure(self):
         pass
