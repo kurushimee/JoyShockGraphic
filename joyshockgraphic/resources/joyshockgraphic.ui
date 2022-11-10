@@ -1908,8 +1908,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>193</width>
-                   <height>293</height>
+                   <width>723</width>
+                   <height>813</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2340,8 +2340,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>241</width>
-                   <height>340</height>
+                   <width>723</width>
+                   <height>813</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2823,7 +2823,7 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>227</width>
+                   <width>706</width>
                    <height>902</height>
                   </rect>
                  </property>
@@ -4148,8 +4148,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>285</width>
-                   <height>236</height>
+                   <width>723</width>
+                   <height>813</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -4511,8 +4511,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>578</width>
-                   <height>683</height>
+                   <width>723</width>
+                   <height>813</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -5873,9 +5873,9 @@
  <connections/>
  <buttongroups>
   <buttongroup name="bgLibrary"/>
-  <buttongroup name="bgConfig"/>
-  <buttongroup name="bgPickBind"/>
   <buttongroup name="bgLoadInput"/>
   <buttongroup name="bgSwitchInput"/>
+  <buttongroup name="bgConfig"/>
+  <buttongroup name="bgPickBind"/>
  </buttongroups>
 </ui>

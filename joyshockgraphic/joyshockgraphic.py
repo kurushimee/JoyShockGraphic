@@ -24,26 +24,46 @@ class MainWindow(QMainWindow):
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
     def handle_profile(self, sender: QPushButton):
-        match sender.objectName():
-            case "pbCreate":
-                # Create a new profile with a dialog
-                dlg = uic.loadUi("joyshockgraphic/resources/new_profile.ui")
-                ok = dlg.exec_()
-                if ok:
-                    self.dman.create_profile(
-                        dlg.leDisplayName.text(),
-                        dlg.leFileName.text(),
-                    )
-                    # Append the profile to the QListWidget
-                    QListWidgetItem(dlg.leDisplayName.text(), self.lwProfiles)
+        cond = sender.objectName()
+        if cond == "pbCreate":
+            self.create()
+        elif cond == "pbEdit":
+            self.edit()
+        elif cond == "pbConfigure":
+            self.configure()
+        elif cond == "pbDelete":
+            self.delete()
 
     def load_input(self, sender: QPushButton):
         pass
 
     def pick_bind(self, sender: QPushButton):
-        pass
+        dlg = uic.loadUi("joyshockgraphic/resources/bind_picker.ui")
+        dlg.exec_()
 
     def switch_input(self, sender: QPushButton):
+        pass
+
+    def create(self):
+        # Open profile creation dialog
+        dlg = uic.loadUi("joyshockgraphic/resources/new_profile.ui")
+        ok = dlg.exec_()
+        if ok:
+            # Create profile
+            self.dman.create_profile(
+                dlg.leDisplayName.text(),
+                dlg.leFileName.text(),
+            )
+            # Append profile to a QListWidget
+            QListWidgetItem(dlg.leDisplayName.text(), self.lwProfiles)
+
+    def edit(self):
+        pass
+
+    def configure(self):
+        pass
+
+    def delete(self):
         pass
 
     def closeEvent(self, event):
