@@ -217,7 +217,7 @@ class MainWindow(QMainWindow):
             auto_calibrate[self.get_bind("AUTO_CALIBRATE", "OFF")]
         )
         self.chAccel.setChecked(bool(self.get_bind("accel", "True")))
-        self.accel(self.chAccel.isChecked())
+        self.on_accel_change(self.chAccel.isChecked())
 
         self.leGyroSens.setText(
             str(self.get_bind("GYRO_SENS", "3 3").split()[0])
@@ -240,24 +240,24 @@ class MainWindow(QMainWindow):
             str(self.get_bind("MAX_GYRO_THRESHOLD", "75"))
         )
 
-    def accel(self, accel: bool):
-        self.lGyroSens.setEnabled(not accel)
-        self.leGyroSens.setEnabled(not accel)
-        self.chVSens.setEnabled(not accel)
-        self.leVSens.setEnabled(self.chVSens.isChecked() and not accel)
+    def on_accel_change(self, state: bool):
+        self.lGyroSens.setEnabled(not state)
+        self.leGyroSens.setEnabled(not state)
+        self.chVSens.setEnabled(not state)
+        self.leVSens.setEnabled(self.chVSens.isChecked() and not state)
 
-        self.lMinSens.setEnabled(accel)
-        self.lMaxSens.setEnabled(accel)
-        self.leMinGyroSens.setEnabled(accel)
-        self.leMaxGyroSens.setEnabled(accel)
-        self.lMinThreshold.setEnabled(accel)
-        self.lMaxThreshold.setEnabled(accel)
-        self.leMinThreshold.setEnabled(accel)
-        self.leMaxThreshold.setEnabled(accel)
-        self.chMinVSens.setEnabled(accel)
-        self.chMaxVSens.setEnabled(accel)
-        self.leMinVSens.setEnabled(self.chMinVSens.isChecked() and accel)
-        self.leMaxVSens.setEnabled(self.chMaxVSens.isChecked() and accel)
+        self.lMinSens.setEnabled(state)
+        self.lMaxSens.setEnabled(state)
+        self.leMinGyroSens.setEnabled(state)
+        self.leMaxGyroSens.setEnabled(state)
+        self.lMinThreshold.setEnabled(state)
+        self.lMaxThreshold.setEnabled(state)
+        self.leMinThreshold.setEnabled(state)
+        self.leMaxThreshold.setEnabled(state)
+        self.chMinVSens.setEnabled(state)
+        self.chMaxVSens.setEnabled(state)
+        self.leMinVSens.setEnabled(self.chMinVSens.isChecked() and state)
+        self.leMaxVSens.setEnabled(self.chMaxVSens.isChecked() and state)
 
     def on_stick_mode_change(self, value):
         modes = {
@@ -343,10 +343,20 @@ class MainWindow(QMainWindow):
             "chMinVSens": "min_v_sens",
             "chMaxVSens": "max_v_sens",
         }
+        v_sens_counterpart = {
+            "chVSens": self.leVSens.setEnabled,
+            "chMinVSens": self.leMinVSens.setEnabled,
+            "chMaxVSens": self.leMaxVSens.setEnabled,
+        }
         sender = self.sender()
         value = ("", "True")[int(sender.isChecked())]
         if sender.objectName() == "chAutoCalibrate":
             value = ("OFF", "ON")[int(sender.isChecked())]
+        elif sender.objectName() != "chAccel":
+            v_sens_counterpart[sender.objectName()](sender.isChecked())
+        else:
+            self.on_accel_change(sender.isChecked())
+
         self.set_bind(commands[sender.objectName()], bind=value)
 
 

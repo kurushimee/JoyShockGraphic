@@ -416,7 +416,7 @@
              <bool>true</bool>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="buttonsPage">
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -4908,6 +4908,9 @@
                    <layout class="QHBoxLayout" name="horizontalLayout_48">
                     <item>
                      <widget class="QLabel" name="lGyroSens">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>16</pointsize>
