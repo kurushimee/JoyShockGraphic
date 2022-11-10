@@ -113,7 +113,8 @@ class MainWindow(QMainWindow):
     def configure(self):
         # Enable configurator and set current profile
         self.mainTabs.setTabEnabled(1, True)
-        self.profile = self.lwProfiles.currentItem().text()
+        self.e_profile = self.lwProfiles.currentItem().text()
+        self.e_bind = None
         self.init_configurator()
 
     def delete(self):
@@ -125,21 +126,24 @@ class MainWindow(QMainWindow):
         self.dman.close()
 
     def init_configurator(self):
+        special = {"pbMinus": "-", "pbPlus": "+"}
+        # Go through each bind button
         for button in self.bgPickBind.buttons():
-            i = (
-                0
-                if button.objectName()[-2] != r"^_[1-9]$"
-                else int(button.objectName()[-1])
+            # Cut off "pb" prefix from the button name
+            name = (
+                button.objectName()[2:]
+                if button.objectName() not in special
+                else special[button.objectName()]
             )
-            print(i)
-            special = {"pbMinus": "-", "pbPlus": "+"}
-            name = button.objectName()[:-2] if i > 0 else button.objectName()
-            name = name[2:] if name not in special else special[name]
-            button.setText(
-                self.dman.select("bind", self.profile, f'command = "{name}"')[
-                    i
-                ]
+            # Use button name as the command to search for
+            bind = self.dman.select(
+                "bind", self.e_profile, f'command = "{name}"'
             )
+            # Change button's text according to it's bind in profile
+            if len(bind) > 0:
+                button.setText(bind[0][0])
+            else:
+                button.setText("None")
 
 
 if __name__ == "__main__":
