@@ -28,8 +28,19 @@ class MainWindow(QMainWindow):
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
         # Connect rest of the buttons
-        self.cbRmode.currentIndexChanged.connect(self.on_rmode_change)
-        self.cbLmode.currentIndexChanged.connect(self.on_lmode_change)
+        self.cbRmode.currentIndexChanged.connect(self.on_stick_mode_change)
+        self.cbLmode.currentIndexChanged.connect(self.on_stick_mode_change)
+        # Gyro
+        self.leRWC.returnPressed.connect(self.on_gyro_le)
+        self.leSens.returnPressed.connect(self.on_gyro_le)
+        self.leGyroSens.returnPressed.connect(self.on_gyro_le)
+        self.leVSens.returnPressed.connect(self.on_gyro_le)
+        self.leMinGyroSens.returnPressed.connect(self.on_gyro_le)
+        self.leMinVSens.returnPressed.connect(self.on_gyro_le)
+        self.leMinThreshold.returnPressed.connect(self.on_gyro_le)
+        self.leMaxGyroSens.returnPressed.connect(self.on_gyro_le)
+        self.leMaxVSens.returnPressed.connect(self.on_gyro_le)
+        self.leMaxThreshold.returnPressed.connect(self.on_gyro_le)
 
     def populate_list(self):
         self.lwProfiles.clear()
@@ -192,8 +203,8 @@ class MainWindow(QMainWindow):
         )
 
         # Init gyro
-        self.leRWC.setText(self.get_bind("REAL_WORLD_CALIBRATION", "45"))
-        self.leSens.setText(self.get_bind("IN_GAME_SENS", "1"))
+        self.leRWC.setText(str(self.get_bind("REAL_WORLD_CALIBRATION", "45")))
+        self.leSens.setText(str(self.get_bind("IN_GAME_SENS", "1")))
         auto_calibrate = {"ON": True, "OFF": False}
         self.chAutoCalibrate.setChecked(
             auto_calibrate[self.get_bind("AUTO_CALIBRATE", "OFF")]
@@ -201,20 +212,26 @@ class MainWindow(QMainWindow):
         self.chAccel.setChecked(bool(self.get_bind("accel", "True")))
         self.accel(self.chAccel.isChecked())
 
-        self.leGyroSens.setText(self.get_bind("GYRO_SENS", "3 3").split()[0])
+        self.leGyroSens.setText(
+            str(self.get_bind("GYRO_SENS", "3 3").split()[0])
+        )
         self.chVSens.setChecked(bool(self.get_bind("v_sens", "")))
-        self.leVSens.setText(self.get_bind("GYRO_SENS", "3 3").split()[1])
+        self.leVSens.setText(str(self.get_bind("GYRO_SENS", "3 3").split()[1]))
 
         self.leMinGyroSens.setText(
-            self.get_bind("MIN_GYRO_SENS", "2 2").split()[0]
+            str(self.get_bind("MIN_GYRO_SENS", "2 2").split()[0])
         )
         self.chMinVSens.setChecked(bool(self.get_bind("min_v_sens", "")))
         self.chMaxVSens.setChecked(bool(self.get_bind("max_v_sens", "")))
         self.leMaxGyroSens.setText(
-            self.get_bind("MAX_GYRO_SENS", "4 4").split()[1]
+            str(self.get_bind("MAX_GYRO_SENS", "4 4").split()[1])
         )
-        self.leMinThreshold.setText(self.get_bind("MIN_GYRO_THRESHOLD", "0"))
-        self.leMaxThreshold.setText(self.get_bind("MAX_GYRO_THRESHOLD", "75"))
+        self.leMinThreshold.setText(
+            str(self.get_bind("MIN_GYRO_THRESHOLD", "0"))
+        )
+        self.leMaxThreshold.setText(
+            str(self.get_bind("MAX_GYRO_THRESHOLD", "75"))
+        )
 
     def accel(self, accel: bool):
         self.lGyroSens.setEnabled(not accel)
@@ -235,7 +252,7 @@ class MainWindow(QMainWindow):
         self.leMinVSens.setEnabled(self.chMinVSens.isChecked() and accel)
         self.leMaxVSens.setEnabled(self.chMaxVSens.isChecked() and accel)
 
-    def on_rmode_change(self, value):
+    def on_stick_mode_change(self, value):
         modes = {
             0: "AIM",
             1: "FLICK",
@@ -246,20 +263,70 @@ class MainWindow(QMainWindow):
             6: "NO_MOUSE",
             7: "SCROLL_WHEEL",
         }
-        self.set_bind("RIGHT_STICK_MODE", bind=modes[value])
+        mode = (
+            "RIGHT_STICK_MODE"
+            if self.sender().objectName() == "cbRmode"
+            else "LEFT_STICK_MODE"
+        )
+        self.set_bind(mode, bind=modes[value])
 
-    def on_lmode_change(self, value):
-        modes = {
-            0: "AIM",
-            1: "FLICK",
-            2: "FLICK_ONLY",
-            3: "ROTATE_ONLY",
-            4: "MOUSE_RING",
-            5: "MOUSE_AREA",
-            6: "NO_MOUSE",
-            7: "SCROLL_WHEEL",
+    def on_gyro_le(self):
+        value = self.sender().text()
+        commands = {
+            "leRWC": "REAL_WORLD_CALIBRATION",
+            "leSens": "IN_GAME_SENS",
+            "leGyroSens": "GYRO_SENS",
+            "leVSens": "GYRO_SENS",
+            "leMinGyroSens": "MIN_GYRO_SENS",
+            "leMinVSens": "MIN_GYRO_SENS",
+            "leMinThreshold": "MIN_GYRO_THRESHOLD",
+            "leMaxGyroSens": "MAX_GYRO_SENS",
+            "leMaxVSens": "MAX_GYRO_SENS",
+            "leMaxThreshold": "MAX_GYRO_THRESHOLD",
         }
-        self.set_bind("LEFT_STICK_MODE", bind=modes[value])
+
+        # If horizontal or vertical sens, find the other one
+        # for combined command value
+        # If vertical sens and it's written in percent format,
+        # calculate it's value based on horizontal sens
+        v_sens_h = {
+            "leVSens": "leGyroSens",
+            "leMinVSens": "leMinGyroSens",
+            "leMaxVSens": "leMaxGyroSens",
+        }
+        h_sens_v = {
+            "leGyroSens": "leVSens",
+            "leMinGyroSens": "leMinVSens",
+            "leMaxGyroSens": "leMaxVSens",
+        }
+        default_sens = {
+            "leGyroSens": "3",
+            "leMinGyroSens": "2",
+            "leMaxGyroSens": "4",
+        }
+        obj_name = self.sender().objectName()
+        if obj_name in v_sens_h:
+            h_sens = self.get_bind(
+                v_sens_h[obj_name],
+                f"{default_sens[v_sens_h[obj_name]]} {value}",
+            ).split()[0]
+            v_sens = (
+                int(h_sens) * (int(value[:-1]) / 100)
+                if value[-1] == "%"
+                else value
+            )
+            value = " ".join((h_sens, v_sens))
+        if obj_name in h_sens_v:
+            value = " ".join(
+                (
+                    value,
+                    self.get_bind(
+                        h_sens_v[obj_name], f"{value} {value}"
+                    ).split()[1],
+                )
+            )
+
+        self.set_bind(commands[obj_name], bind=str(value))
 
 
 if __name__ == "__main__":

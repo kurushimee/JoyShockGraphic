@@ -68,9 +68,13 @@ class DManager:
     def insert(self, table: str, values: tuple, fields=()):
         # Insert new entry to the database
         f = "" if fields == () else ",".join([f'"{x}"' for x in fields])
-        v = [f'"{x}"' for x in values]
-        # Replace None with NULL
-        v = ",".join(["NULL" for x in v if x == f'"{x}"'])
+        v = list()
+        for x in values:
+            if x is None:
+                v.append("NULL")
+            else:
+                v.append(f'"{x}"')
+        v = ",".join(v)
         self.cur.execute(f'INSERT INTO "{table}"{f} VALUES({v})')
         self.con.commit()
 
