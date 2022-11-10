@@ -68,17 +68,20 @@ class DManager:
     def insert(self, table: str, values: tuple, fields=()):
         # Insert new entry to the database
         f = "" if fields == () else ",".join([f'"{x}"' for x in fields])
-        v = ",".join([f'"{x}"' for x in values])
+        v = [f'"{x}"' for x in values]
+        # Replace None with NULL
+        v = ",".join(["NULL" for x in v if x == f'"{x}"'])
         self.cur.execute(f'INSERT INTO "{table}"{f} VALUES({v})')
         self.con.commit()
 
     def update(self, table: str, field: str, value: str, condition=""):
-        # Update an entry in the database
+        # Update an entry in the database if it exists
         if condition != "":
             condition = "WHERE " + condition
+        value = f'"{value}"' if value is not None else "NULL"
         self.cur.execute(
             f"""UPDATE "{table}"
-                SET {field} = "{value}"
+                SET {field} = {value}
                 {condition}"""
         )
         self.con.commit()

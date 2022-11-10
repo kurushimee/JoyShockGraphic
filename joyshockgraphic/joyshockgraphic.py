@@ -27,6 +27,10 @@ class MainWindow(QMainWindow):
         self.bgPickBind.buttonClicked.connect(self.pick_bind)
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
+        # Connect rest of the buttons
+        self.cbRmode.currentIndexChanged.connect(self.on_rmode_change)
+        self.cbLmode.currentIndexChanged.connect(self.on_lmode_change)
+
     def populate_list(self):
         self.lwProfiles.clear()
         for profile in self.dman.select("display_name", "profiles"):
@@ -125,12 +129,36 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event):
         self.dman.close()
 
-    def gbind(self, command: str, default: str):
+    def get_bind(self, command: str, default: str):
         # Get existing bind or default value
         bind = self.dman.select(
             "bind", self.e_profile, f'command = "{command}"'
         )
         return bind[0][0] if len(bind) > 0 else default
+
+    def set_bind(
+        self, command: str, chord=None, action=None, bind=None, event=None
+    ):
+        # Update an existing bind
+        if (
+            len(
+                self.dman.select("*", self.e_profile, f'command = "{command}"')
+            )
+            > 0
+        ):
+            for field, value in (
+                ("chord", chord),
+                ("action", action),
+                ("bind", bind),
+                ("event", event),
+            ):
+                self.dman.update(
+                    self.e_profile, field, value, f'command = "{command}"'
+                )
+        else:
+            self.dman.insert(
+                self.e_profile, (command, chord, action, bind, event)
+            )
 
     def init_configurator(self):
         # Init buttons
@@ -143,7 +171,7 @@ class MainWindow(QMainWindow):
                 else special[button.objectName()]
             )
             # Change button's text according to it's bind in profile
-            button.setText(self.gbind(name, "None"))
+            button.setText(self.get_bind(name, "None"))
 
         # Init joysticks
         modes = {
@@ -157,36 +185,36 @@ class MainWindow(QMainWindow):
             "SCROLL_WHEEL": 7,
         }
         self.cbRmode.setCurrentIndex(
-            modes[self.gbind("RIGHT_STICK_MODE", "AIM")]
+            modes[self.get_bind("RIGHT_STICK_MODE", "AIM")]
         )
         self.cbLmode.setCurrentIndex(
-            modes[self.gbind("LEFT_STICK_MODE", "NO_MOUSE")]
+            modes[self.get_bind("LEFT_STICK_MODE", "NO_MOUSE")]
         )
 
         # Init gyro
-        self.leRWC.setText(self.gbind("REAL_WORLD_CALIBRATION", "45"))
-        self.leSens.setText(self.gbind("IN_GAME_SENS", "1"))
+        self.leRWC.setText(self.get_bind("REAL_WORLD_CALIBRATION", "45"))
+        self.leSens.setText(self.get_bind("IN_GAME_SENS", "1"))
         auto_calibrate = {"ON": True, "OFF": False}
         self.chAutoCalibrate.setChecked(
-            auto_calibrate[self.gbind("AUTO_CALIBRATE", "OFF")]
+            auto_calibrate[self.get_bind("AUTO_CALIBRATE", "OFF")]
         )
-        self.chAccel.setChecked(bool(self.gbind("accel", "True")))
+        self.chAccel.setChecked(bool(self.get_bind("accel", "True")))
         self.accel(self.chAccel.isChecked())
 
-        self.leGyroSens.setText(self.gbind("GYRO_SENS", "3 3").split()[0])
-        self.chVSens.setChecked(bool(self.gbind("v_sens", "")))
-        self.leVSens.setText(self.gbind("GYRO_SENS", "3 3").split()[1])
+        self.leGyroSens.setText(self.get_bind("GYRO_SENS", "3 3").split()[0])
+        self.chVSens.setChecked(bool(self.get_bind("v_sens", "")))
+        self.leVSens.setText(self.get_bind("GYRO_SENS", "3 3").split()[1])
 
         self.leMinGyroSens.setText(
-            self.gbind("MIN_GYRO_SENS", "2 2").split()[0]
+            self.get_bind("MIN_GYRO_SENS", "2 2").split()[0]
         )
-        self.chMinVSens.setChecked(bool(self.gbind("min_v_sens", "")))
-        self.chMaxVSens.setChecked(bool(self.gbind("max_v_sens", "")))
+        self.chMinVSens.setChecked(bool(self.get_bind("min_v_sens", "")))
+        self.chMaxVSens.setChecked(bool(self.get_bind("max_v_sens", "")))
         self.leMaxGyroSens.setText(
-            self.gbind("MAX_GYRO_SENS", "4 4").split()[1]
+            self.get_bind("MAX_GYRO_SENS", "4 4").split()[1]
         )
-        self.leMinThreshold.setText(self.gbind("MIN_GYRO_THRESHOLD", "0"))
-        self.leMaxThreshold.setText(self.gbind("MAX_GYRO_THRESHOLD", "75"))
+        self.leMinThreshold.setText(self.get_bind("MIN_GYRO_THRESHOLD", "0"))
+        self.leMaxThreshold.setText(self.get_bind("MAX_GYRO_THRESHOLD", "75"))
 
     def accel(self, accel: bool):
         self.lGyroSens.setEnabled(not accel)
@@ -206,6 +234,32 @@ class MainWindow(QMainWindow):
         self.chMaxVSens.setEnabled(accel)
         self.leMinVSens.setEnabled(self.chMinVSens.isChecked() and accel)
         self.leMaxVSens.setEnabled(self.chMaxVSens.isChecked() and accel)
+
+    def on_rmode_change(self, value):
+        modes = {
+            0: "AIM",
+            1: "FLICK",
+            2: "FLICK_ONLY",
+            3: "ROTATE_ONLY",
+            4: "MOUSE_RING",
+            5: "MOUSE_AREA",
+            6: "NO_MOUSE",
+            7: "SCROLL_WHEEL",
+        }
+        self.set_bind("RIGHT_STICK_MODE", bind=modes[value])
+
+    def on_lmode_change(self, value):
+        modes = {
+            0: "AIM",
+            1: "FLICK",
+            2: "FLICK_ONLY",
+            3: "ROTATE_ONLY",
+            4: "MOUSE_RING",
+            5: "MOUSE_AREA",
+            6: "NO_MOUSE",
+            7: "SCROLL_WHEEL",
+        }
+        self.set_bind("LEFT_STICK_MODE", bind=modes[value])
 
 
 if __name__ == "__main__":
