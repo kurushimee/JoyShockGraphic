@@ -27,10 +27,11 @@ class MainWindow(QMainWindow):
         self.bgPickBind.buttonClicked.connect(self.pick_bind)
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
-        # Connect rest of the buttons
+        # Connect rest of the controls
+        # Joysticks
         self.cbRmode.currentIndexChanged.connect(self.on_stick_mode_change)
         self.cbLmode.currentIndexChanged.connect(self.on_stick_mode_change)
-        # Gyro
+        # Gyro line edits
         self.leRWC.returnPressed.connect(self.on_gyro_le)
         self.leSens.returnPressed.connect(self.on_gyro_le)
         self.leGyroSens.returnPressed.connect(self.on_gyro_le)
@@ -41,6 +42,12 @@ class MainWindow(QMainWindow):
         self.leMaxGyroSens.returnPressed.connect(self.on_gyro_le)
         self.leMaxVSens.returnPressed.connect(self.on_gyro_le)
         self.leMaxThreshold.returnPressed.connect(self.on_gyro_le)
+        # Gyro check boxes
+        self.chAutoCalibrate.stateChanged.connect(self.on_gyro_ch)
+        self.chAccel.stateChanged.connect(self.on_gyro_ch)
+        self.chVSens.stateChanged.connect(self.on_gyro_ch)
+        self.chMinVSens.stateChanged.connect(self.on_gyro_ch)
+        self.chMaxVSens.stateChanged.connect(self.on_gyro_ch)
 
     def populate_list(self):
         self.lwProfiles.clear()
@@ -327,6 +334,20 @@ class MainWindow(QMainWindow):
             )
 
         self.set_bind(commands[obj_name], bind=str(value))
+
+    def on_gyro_ch(self):
+        commands = {
+            "chAutoCalibrate": "AUTO_CALIBRATE",
+            "chAccel": "accel",
+            "chVSens": "v_sens",
+            "chMinVSens": "min_v_sens",
+            "chMaxVSens": "max_v_sens",
+        }
+        sender = self.sender()
+        value = ("", "True")[int(sender.isChecked())]
+        if sender.objectName() == "chAutoCalibrate":
+            value = ("OFF", "ON")[int(sender.isChecked())]
+        self.set_bind(commands[sender.objectName()], bind=value)
 
 
 if __name__ == "__main__":
