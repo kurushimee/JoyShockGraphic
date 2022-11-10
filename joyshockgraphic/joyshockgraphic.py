@@ -86,9 +86,15 @@ class MainWindow(QMainWindow):
 
     def pick_bind(self, sender: QPushButton):
         dlg = uic.loadUi("joyshockgraphic/resources/picker.ui")
-        ok = dlg.exec_()
-        if ok:
-            pass
+        exceptions = {"pbMinus": "-", "pbPlus": "+"}
+        obj_name = sender.objectName()
+        self.e_command = (
+            obj_name[2:]
+            if obj_name not in exceptions
+            else exceptions[obj_name]
+        )
+        dlg.bgKeyboard.buttonClicked.connect(self.on_keyboard_bg)
+        dlg.exec_()
 
     def switch_input(self, sender: QPushButton):
         tabs = {
@@ -100,6 +106,42 @@ class MainWindow(QMainWindow):
             "pbGyro": 5,
         }
         self.inputWidgets.setCurrentIndex(tabs[sender.objectName()])
+
+    def on_keyboard_bg(self, sender: QPushButton):
+        exceptions = {
+            "tilda": "`",
+            "zero": "0",
+            "one": "1",
+            "two": "2",
+            "three": "3",
+            "four": "4",
+            "five": "5",
+            "six": "6",
+            "seven": "7",
+            "eight": "8",
+            "nine": "9",
+            "lpar": "[",
+            "rpar": "]",
+            "backslash": "\\",
+            "semicolon": ";",
+            "quote": "'",
+            "question": "?",
+            "comma": ",",
+            "period": ".",
+        }
+        obj_name = sender.objectName()
+        bind = obj_name if obj_name not in exceptions else exceptions[obj_name]
+
+        self.set_bind(self.e_command, bind=bind)
+        commands = {"-": "pbMinus", "+": "pbPlus"}
+        command = (
+            "pb" + self.e_command
+            if self.e_command not in commands
+            else commands[self.e_command]
+        )
+        for button in self.bgPickBind.buttons():
+            if button.objectName() == command:
+                button.setText(bind)
 
     def create(self):
         # Open profile creation dialog
