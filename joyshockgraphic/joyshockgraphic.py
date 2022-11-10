@@ -125,9 +125,16 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event):
         self.dman.close()
 
+    def gbind(self, command: str, default: str):
+        # Get existing bind or default value
+        bind = self.dman.select(
+            "bind", self.e_profile, f'command = "{command}"'
+        )
+        return bind[0][0] if len(bind) > 0 else default
+
     def init_configurator(self):
+        # Init buttons
         special = {"pbMinus": "-", "pbPlus": "+"}
-        # Go through each bind button
         for button in self.bgPickBind.buttons():
             # Cut off "pb" prefix from the button name
             name = (
@@ -135,15 +142,70 @@ class MainWindow(QMainWindow):
                 if button.objectName() not in special
                 else special[button.objectName()]
             )
-            # Use button name as the command to search for
-            bind = self.dman.select(
-                "bind", self.e_profile, f'command = "{name}"'
-            )
             # Change button's text according to it's bind in profile
-            if len(bind) > 0:
-                button.setText(bind[0][0])
-            else:
-                button.setText("None")
+            button.setText(self.gbind(name, "None"))
+
+        # Init joysticks
+        modes = {
+            "AIM": 0,
+            "FLICK": 1,
+            "FLICK_ONLY": 2,
+            "ROTATE_ONLY": 3,
+            "MOUSE_RING": 4,
+            "MOUSE_AREA": 5,
+            "NO_MOUSE": 6,
+            "SCROLL_WHEEL": 7,
+        }
+        self.cbRmode.setCurrentIndex(
+            modes[self.gbind("RIGHT_STICK_MODE", "AIM")]
+        )
+        self.cbLmode.setCurrentIndex(
+            modes[self.gbind("LEFT_STICK_MODE", "NO_MOUSE")]
+        )
+
+        # Init gyro
+        self.leRWC.setText(self.gbind("REAL_WORLD_CALIBRATION", "45"))
+        self.leSens.setText(self.gbind("IN_GAME_SENS", "1"))
+        auto_calibrate = {"ON": True, "OFF": False}
+        self.chAutoCalibrate.setChecked(
+            auto_calibrate[self.gbind("AUTO_CALIBRATE", "OFF")]
+        )
+        self.chAccel.setChecked(bool(self.gbind("accel", "True")))
+        self.accel(self.chAccel.isChecked())
+
+        self.leGyroSens.setText(self.gbind("GYRO_SENS", "3 3").split()[0])
+        self.chVSens.setChecked(bool(self.gbind("v_sens", "")))
+        self.leVSens.setText(self.gbind("GYRO_SENS", "3 3").split()[1])
+
+        self.leMinGyroSens.setText(
+            self.gbind("MIN_GYRO_SENS", "2 2").split()[0]
+        )
+        self.chMinVSens.setChecked(bool(self.gbind("min_v_sens", "")))
+        self.chMaxVSens.setChecked(bool(self.gbind("max_v_sens", "")))
+        self.leMaxGyroSens.setText(
+            self.gbind("MAX_GYRO_SENS", "4 4").split()[1]
+        )
+        self.leMinThreshold.setText(self.gbind("MIN_GYRO_THRESHOLD", "0"))
+        self.leMaxThreshold.setText(self.gbind("MAX_GYRO_THRESHOLD", "75"))
+
+    def accel(self, accel: bool):
+        self.lGyroSens.setEnabled(not accel)
+        self.leGyroSens.setEnabled(not accel)
+        self.chVSens.setEnabled(not accel)
+        self.leVSens.setEnabled(self.chVSens.isChecked() and not accel)
+
+        self.lMinSens.setEnabled(accel)
+        self.lMaxSens.setEnabled(accel)
+        self.leMinGyroSens.setEnabled(accel)
+        self.leMaxGyroSens.setEnabled(accel)
+        self.lMinThreshold.setEnabled(accel)
+        self.lMaxThreshold.setEnabled(accel)
+        self.leMinThreshold.setEnabled(accel)
+        self.leMaxThreshold.setEnabled(accel)
+        self.chMinVSens.setEnabled(accel)
+        self.chMaxVSens.setEnabled(accel)
+        self.leMinVSens.setEnabled(self.chMinVSens.isChecked() and accel)
+        self.leMaxVSens.setEnabled(self.chMaxVSens.isChecked() and accel)
 
 
 if __name__ == "__main__":
