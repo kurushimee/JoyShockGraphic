@@ -32,19 +32,21 @@ class DManager:
             "profiles",
             "display_name",
             new_data[0],
-            f"display_name={old_data[0]}",
+            f'display_name="{old_data[0]}"',
         )
         self.update(
             "profiles",
             "file_name",
             new_data[1],
-            f"file_name={old_data[1]}",
+            f'file_name="{old_data[1]}"',
         )
 
     # Select entries from the database
     def select(self, field: str, table: str, condition=""):
+        if condition != "":
+            condition = " WHERE " + condition
         return self.cur.execute(
-            f"SELECT {field} FROM {table} WHERE {condition}"
+            f"SELECT {field} FROM {table}{condition}"
         ).fetchall()
 
     # Insert new entry to the database
@@ -56,10 +58,12 @@ class DManager:
 
     # Update an entry in the database
     def update(self, table: str, field: str, value: str, condition=""):
+        if condition != "":
+            condition = "WHERE " + condition
         self.cur.execute(
             f"""UPDATE {table}
-                             SET {field} = {value}
-                             WHERE {condition}"""
+                SET {field} = "{value}"
+                {condition}"""
         )
         self.con.commit()
 

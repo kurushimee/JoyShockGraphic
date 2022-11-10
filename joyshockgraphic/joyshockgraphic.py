@@ -16,12 +16,19 @@ class MainWindow(QMainWindow):
 
         # Initialise database manager
         self.dman = DManager()
+        # Populate lwProfiles with already existing profiles
+        self.populate_list()
 
         # Connect button groups
         self.bgLibrary.buttonClicked.connect(self.handle_profile)
         self.bgLoadInput.buttonClicked.connect(self.load_input)
         self.bgPickBind.buttonClicked.connect(self.pick_bind)
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
+
+    def populate_list(self):
+        for profile in self.dman.select("display_name", "profiles"):
+            display_name = profile[0]
+            QListWidgetItem(display_name, self.lwProfiles)
 
     def handle_profile(self, sender: QPushButton):
         cond = sender.objectName()
@@ -38,15 +45,17 @@ class MainWindow(QMainWindow):
         pass
 
     def pick_bind(self, sender: QPushButton):
-        dlg = uic.loadUi("joyshockgraphic/resources/bind_picker.ui")
-        dlg.exec_()
+        dlg = uic.loadUi("joyshockgraphic/resources/picker.ui")
+        ok = dlg.exec_()
+        if ok:
+            pass
 
     def switch_input(self, sender: QPushButton):
         pass
 
     def create(self):
         # Open profile creation dialog
-        dlg = uic.loadUi("joyshockgraphic/resources/new_profile.ui")
+        dlg = uic.loadUi("joyshockgraphic/resources/profile.ui")
         ok = dlg.exec_()
         if ok:
             # Create profile
@@ -54,11 +63,26 @@ class MainWindow(QMainWindow):
                 dlg.leDisplayName.text(),
                 dlg.leFileName.text(),
             )
-            # Append profile to a QListWidget
+            # Append profile to lwProfiles
             QListWidgetItem(dlg.leDisplayName.text(), self.lwProfiles)
 
     def edit(self):
-        pass
+        # Open profile creation dialog
+        dlg = uic.loadUi("joyshockgraphic/resources/profile.ui")
+        ok = dlg.exec_()
+        if ok:
+            display_name = self.lwProfiles.currentItem().text()
+            self.dman.edit_profile(
+                (
+                    display_name,
+                    self.dman.select(
+                        "file_name",
+                        "profiles",
+                        f'display_name = "{display_name}"',
+                    ),
+                ),
+                (dlg.leDisplayName.text(), dlg.leFileName.text()),
+            )
 
     def configure(self):
         pass

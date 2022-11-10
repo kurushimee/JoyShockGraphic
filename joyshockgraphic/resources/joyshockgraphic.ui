@@ -71,28 +71,6 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pbOpen">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Loads selected profile's into JSM&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="text">
-             <string>Open...</string>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">bgLibrary</string>
-            </attribute>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="pbEdit">
             <property name="enabled">
              <bool>false</bool>
@@ -113,8 +91,33 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens selected profile in the &amp;quot;Configuration&amp;quot; tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Edit</string>
+             <string>Edit...</string>
             </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bgLibrary</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbDelete">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deletes selected profile&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Delete</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bgLibrary</string>
+            </attribute>
            </widget>
           </item>
           <item>
@@ -146,28 +149,6 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pbDelete">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deletes selected profile&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="text">
-             <string>Delete</string>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">bgLibrary</string>
-            </attribute>
-           </widget>
-          </item>
-          <item>
            <spacer name="horizontalSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -188,6 +169,9 @@
        </layout>
       </widget>
       <widget class="QWidget" name="configTab">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <attribute name="title">
         <string>Configuration</string>
        </attribute>
@@ -1908,8 +1892,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>193</width>
+                   <height>293</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2340,8 +2324,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>241</width>
+                   <height>340</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2823,7 +2807,7 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>706</width>
+                   <width>227</width>
                    <height>902</height>
                   </rect>
                  </property>
@@ -4148,8 +4132,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>285</width>
+                   <height>236</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -4511,8 +4495,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>578</width>
+                   <height>683</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -4557,7 +4541,7 @@
                     <item>
                      <widget class="QLineEdit" name="leGyroSens_3">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximumSize">
                        <size>
@@ -4620,7 +4604,7 @@
                     <item>
                      <widget class="QLineEdit" name="leGyroSens_4">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximumSize">
                        <size>
@@ -4972,7 +4956,7 @@
                     <item>
                      <widget class="QCheckBox" name="chVSens">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="font">
                        <font>
@@ -5089,7 +5073,7 @@
                     <item>
                      <widget class="QLineEdit" name="leMinGyroSens">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximumSize">
                        <size>
@@ -5113,7 +5097,7 @@
                     <item>
                      <widget class="QCheckBox" name="chMinVSens">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="font">
                        <font>
@@ -5186,7 +5170,7 @@
                     <item>
                      <widget class="QLineEdit" name="leMinThreshold">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximumSize">
                        <size>
@@ -5214,7 +5198,7 @@
                     <item>
                      <widget class="QSlider" name="slMinGyroSens">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximum">
                        <number>25</number>
@@ -5269,7 +5253,7 @@
                     <item>
                      <widget class="QLineEdit" name="leMaxGyroSens">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximumSize">
                        <size>
@@ -5293,7 +5277,7 @@
                     <item>
                      <widget class="QCheckBox" name="chMaxVSens">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="font">
                        <font>
@@ -5366,7 +5350,7 @@
                     <item>
                      <widget class="QLineEdit" name="leMaxThreshold">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximumSize">
                        <size>
@@ -5394,7 +5378,7 @@
                     <item>
                      <widget class="QSlider" name="slMaxGyroSens">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="maximum">
                        <number>25</number>
@@ -5601,7 +5585,7 @@
             <item>
              <widget class="Line" name="line_17">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -5872,10 +5856,10 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="bgLibrary"/>
-  <buttongroup name="bgLoadInput"/>
-  <buttongroup name="bgSwitchInput"/>
   <buttongroup name="bgConfig"/>
   <buttongroup name="bgPickBind"/>
+  <buttongroup name="bgLoadInput"/>
+  <buttongroup name="bgLibrary"/>
+  <buttongroup name="bgSwitchInput"/>
  </buttongroups>
 </ui>
