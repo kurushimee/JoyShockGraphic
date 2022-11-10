@@ -8,7 +8,7 @@ The goal of JSM is to enable you to play PC games with DS, DS4, JoyCons, and Pro
 # Installation
 You will need to download JoyShockMapper. The latest version of JoyShockMapper can always be found [here](https://github.com/Electronicks/JoyShockMapper/releases).
 
-Then, you will need to simply unpack JoyShockGraphic into the JSM folder and launch JoyShockGraphic.exe. The latest version of JoyShockMapper can always be found [here](https://github.com/iver0/JoyShockGraphic/releases).
+Then, you will need to simply unpack JoyShockGraphic into the JSM folder and launch JoyShockGraphic.exe. The latest version of JoyShockGraphic can always be found [here](https://github.com/iver0/JoyShockGraphic/releases).
 
 You will use JoyShockGraphic to configure your profiles, while using JoyShockMapper for working with your controller.
 
