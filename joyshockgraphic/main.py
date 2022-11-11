@@ -1,7 +1,7 @@
 import sys
 
-from dmanager import DManager
-from ui.main_window import Ui_MainWindow
+from joyshockgraphic.data.dmanager import DManager
+from joyshockgraphic.ui.main_window import Ui_MainWindow
 from PyQt5 import uic
 from PyQt5.QtWidgets import (
     QApplication,
