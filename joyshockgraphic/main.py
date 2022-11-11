@@ -1,5 +1,7 @@
 import sys
+
 from dmanager import DManager
+from ui.main_window import Ui_MainWindow
 from PyQt5 import uic
 from PyQt5.QtWidgets import (
     QApplication,
@@ -9,13 +11,16 @@ from PyQt5.QtWidgets import (
 )
 
 
-class MainWindow(QMainWindow):
+class Main(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("joyshockgraphic/resources/joyshockgraphic.ui", self)
+        self.setupUi(self)
 
-        # Initialise database manager
-        self.dman = DManager()
+        # Initialise data
+        self.db = DManager()
+        self.e_profile = None
+        self.e_command = None
+
         # Populate lwProfiles with already existing profiles
         self.populate_list()
         # Enable profile specific buttons based on selection
@@ -53,15 +58,15 @@ class MainWindow(QMainWindow):
 
     def populate_list(self):
         self.lwProfiles.clear()
-        for profile in self.dman.select("display_name", "profiles"):
+        for profile in self.db.select("display_name", "profiles"):
             display_name = profile[0]
             self.lwProfiles.addItem(display_name)
         self.selection_changed()
 
     def selection_changed(self):
-        currentItem = self.lwProfiles.currentItem()
-        if currentItem and currentItem.text() in [
-            x[0] for x in self.dman.select("display_name", "profiles")
+        current_item = self.lwProfiles.currentItem()
+        if current_item and current_item.text() in [
+            x[0] for x in self.db.select("display_name", "profiles")
         ]:
             condition = True
             self.configure()
@@ -74,13 +79,13 @@ class MainWindow(QMainWindow):
     def handle_profile(self, sender: QPushButton):
         cond = sender.objectName()
         if cond == "pbCreate":
-            self.create()
+            self.create_profile()
         elif cond == "pbEdit":
-            self.edit()
+            self.edit_profile()
         elif cond == "pbDelete":
             self.delete()
 
-    def config(self, sender: QPushButton):
+    def config(self):
         name, ok = QInputDialog.getText(
             self, "Rename command", "New command name:"
         )
@@ -114,7 +119,7 @@ class MainWindow(QMainWindow):
         self.pbRename.setEnabled(True)
         # Load command data
         events = {
-            0: 0,
+            "0": 0,
             "\\": 1,
             "/": 2,
             "'": 3,
@@ -122,22 +127,22 @@ class MainWindow(QMainWindow):
             "+": 5,
         }
         self.cbEvent.setCurrentIndex(
-            events[self.get_command_data(self.e_command, 0, "event")]
+            events[self.get_command_data(self.e_command, "0", "event")]
         )
         actions = {
-            0: 0,
+            "0": 0,
             "^": 1,
             "!": 2,
         }
         self.cbAction.setCurrentIndex(
-            actions[self.get_command_data(self.e_command, 0, "action")]
+            actions[self.get_command_data(self.e_command, "0", "action")]
         )
         self.pbChord.setText(
             self.get_command_data(self.e_command, "None", "chord")
         )
 
     def pick_bind(self, sender: QPushButton):
-        dlg = uic.loadUi("joyshockgraphic/resources/picker.ui")
+        dlg = uic.loadUi("joyshockgraphic/resources/bind_pick.ui")
         exceptions = {"pbMinus": "-", "pbPlus": "+"}
         obj_name = sender.objectName()
         e_command_before = self.e_command
@@ -196,7 +201,7 @@ class MainWindow(QMainWindow):
         )
         for button in self.bgPickBind.buttons():
             if button.objectName() == command:
-                result = self.dman.select(
+                result = self.db.select(
                     "name", self.e_profile, f'command = "{bind}"'
                 )
                 name = (
@@ -204,7 +209,7 @@ class MainWindow(QMainWindow):
                 )
                 button.setText(name)
 
-    def on_advanced_bind(self, sender: QPushButton):
+    def on_advanced_bind(self):
         bind, ok = QInputDialog.getText(
             self, "Advanced binding", "Custom binding:"
         )
@@ -222,28 +227,28 @@ class MainWindow(QMainWindow):
                         self.get_command_data(self.e_command, bind, "name")
                     )
 
-    def create(self):
+    def create_profile(self):
         # Open profile creation dialog
         dlg = uic.loadUi("joyshockgraphic/resources/profile.ui")
         ok = dlg.exec_()
         if ok:
             # Create profile
-            self.dman.create_profile(
+            self.db.create_profile(
                 dlg.leDisplayName.text(),
                 dlg.leFileName.text(),
             )
             self.populate_list()
 
-    def edit(self):
+    def edit_profile(self):
         # Open profile creation dialog
         dlg = uic.loadUi("joyshockgraphic/resources/profile.ui")
         ok = dlg.exec_()
         if ok:
             display_name = self.lwProfiles.currentItem().text()
-            self.dman.edit_profile(
+            self.db.edit_profile(
                 (
                     display_name,
-                    self.dman.select(
+                    self.db.select(
                         "file_name",
                         "profiles",
                         f'display_name = "{display_name}"',
@@ -262,17 +267,17 @@ class MainWindow(QMainWindow):
 
     def delete(self):
         # Deletes selected profile
-        self.dman.delete_profile(self.lwProfiles.currentItem().text())
+        self.db.delete_profile(self.lwProfiles.currentItem().text())
         self.populate_list()
 
     def closeEvent(self, event):
-        self.dman.close()
+        self.db.close()
 
     def get_command_data(
         self, command: str, default: str, field: str = "bind"
     ):
         # Get existing field or default value
-        field = self.dman.select(
+        field = self.db.select(
             field, self.e_profile, f'command = "{command}"'
         )
         return (
@@ -293,7 +298,7 @@ class MainWindow(QMainWindow):
         # Update an existing bind
         if (
             len(
-                self.dman.select("*", self.e_profile, f'command = "{command}"')
+                self.db.select("*", self.e_profile, f'command = "{command}"')
             )
             > 0
         ):
@@ -305,16 +310,16 @@ class MainWindow(QMainWindow):
                 ("name", name),
             ):
                 if value:
-                    self.dman.update(
+                    self.db.update(
                         self.e_profile, field, value, f'command = "{command}"'
                     )
         else:
-            self.dman.insert(
+            self.db.insert(
                 self.e_profile, (command, chord, action, bind, event, name)
             )
 
         # Export profile to .txt
-        self.dman.export_profile(self.e_profile)
+        self.db.export_profile(self.e_profile)
 
     def init_configurator(self):
         # Init buttons
@@ -327,7 +332,7 @@ class MainWindow(QMainWindow):
                 else special[button.objectName()]
             )
             name = self.get_command_data(command, "None")
-            result = self.dman.select(
+            result = self.db.select(
                 "name", self.e_profile, f'command = "{command}"'
             )
             name = result[0][0] if len(result) > 0 and result[0][0] else name
@@ -448,7 +453,7 @@ class MainWindow(QMainWindow):
 
         # If horizontal or vertical sens, find the other one
         # for combined command value
-        # If vertical sens and it's written in percent format,
+        # If vertical sens, and it's written in percent format,
         # calculate it's value based on horizontal sens
         v_sens_h = {
             "leVSens": "leGyroSens",
@@ -516,6 +521,6 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    ex = MainWindow()
+    ex = Main()
     ex.show()
     sys.exit(app.exec_())
