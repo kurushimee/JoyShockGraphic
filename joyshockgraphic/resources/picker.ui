@@ -4159,6 +4159,9 @@
        <property name="text">
         <string>None</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">bgKeyboard</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -4218,8 +4221,8 @@
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="bgKeyboard"/>
   <buttongroup name="bgMouse"/>
+  <buttongroup name="bgKeyboard"/>
   <buttongroup name="bgGamepad"/>
  </buttongroups>
 </ui>

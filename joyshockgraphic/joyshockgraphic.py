@@ -146,6 +146,7 @@ class MainWindow(QMainWindow):
             else exceptions[obj_name]
         )
         dlg.bgKeyboard.buttonClicked.connect(self.on_keyboard_bg)
+        dlg.pbAdvanced.clicked.connect(self.on_advanced_bind)
         dlg.exec_()
         self.e_command = e_command_before
 
@@ -201,6 +202,16 @@ class MainWindow(QMainWindow):
                     result[0][0] if len(result) > 0 and result[0][0] else bind
                 )
                 button.setText(name)
+
+    def on_advanced_bind(self, sender: QPushButton):
+        bind, ok = QInputDialog.getText(
+            self, "Advanced binding", "Custom binding:"
+        )
+        if ok:
+            for button in self.bgPickBind.buttons():
+                if button.objectName() == "pb" + self.e_command:
+                    self.set_command_data(self.e_command, name=bind)
+                    button.setText(bind)
 
     def create(self):
         # Open profile creation dialog
@@ -298,18 +309,18 @@ class MainWindow(QMainWindow):
         special = {"pbMinus": "-", "pbPlus": "+"}
         for button in self.bgPickBind.buttons():
             # Cut off "pb" prefix from the button name
-            name = (
+            command = (
                 button.objectName()[2:]
                 if button.objectName() not in special
                 else special[button.objectName()]
             )
+            name = self.get_command_data(command, "None")
             result = self.dman.select(
-                "name", self.e_profile, f'command = "{name}"'
+                "name", self.e_profile, f'command = "{command}"'
             )
-            if len(result) > 0 and result[0][0] is not None:
-                name = result[0][0]
+            name = result[0][0] if len(result) > 0 and result[0][0] else name
             # Change button's text according to it's bind in profile
-            button.setText(self.get_command_data(name, "None"))
+            button.setText(name)
 
         # Init joysticks
         modes = {
