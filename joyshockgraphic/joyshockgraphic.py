@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import (
     QApplication,
     QMainWindow,
     QPushButton,
+    QInputDialog,
 )
 
 
@@ -79,15 +80,66 @@ class MainWindow(QMainWindow):
             self.delete()
 
     def config(self, sender: QPushButton):
-        pass
+        name, ok = QInputDialog.getText(
+            self, "Rename command", "New command name:"
+        )
+        if ok:
+            exceptions = {"-": "Minus", "+": "Plus"}
+            command = (
+                self.e_command
+                if self.e_command not in exceptions
+                else exceptions[self.e_command]
+            )
+            for button in self.bgPickBind.buttons():
+                if button.objectName() == "pb" + command:
+                    self.set_command_data(self.e_command, name=name)
+                    button.setText(name)
 
     def load_input(self, sender: QPushButton):
-        pass
+        # Set current command for editing
+        exceptions = {"pbMinus": "-", "pbPlus": "+"}
+        obj_name = sender.objectName()
+        self.e_command = (
+            obj_name[2:-8]
+            if obj_name not in exceptions
+            else exceptions[obj_name]
+        )
+        # Enable command editing controls
+        self.cbEvent.setEnabled(True)
+        self.lAction.setEnabled(True)
+        self.cbAction.setEnabled(True)
+        self.lChord.setEnabled(True)
+        self.pbChord.setEnabled(True)
+        self.pbRename.setEnabled(True)
+        # Load command data
+        events = {
+            0: 0,
+            "\\": 1,
+            "/": 2,
+            "'": 3,
+            "_": 4,
+            "+": 5,
+        }
+        self.cbEvent.setCurrentIndex(
+            events[self.get_command_data(self.e_command, 0, "event")]
+        )
+        actions = {
+            0: 0,
+            "^": 1,
+            "!": 2,
+        }
+        self.cbAction.setCurrentIndex(
+            actions[self.get_command_data(self.e_command, 0, "action")]
+        )
+        self.pbChord.setText(
+            self.get_command_data(self.e_command, "None", "chord")
+        )
 
     def pick_bind(self, sender: QPushButton):
         dlg = uic.loadUi("joyshockgraphic/resources/picker.ui")
         exceptions = {"pbMinus": "-", "pbPlus": "+"}
         obj_name = sender.objectName()
+        e_command_before = self.e_command
         self.e_command = (
             obj_name[2:]
             if obj_name not in exceptions
@@ -95,6 +147,7 @@ class MainWindow(QMainWindow):
         )
         dlg.bgKeyboard.buttonClicked.connect(self.on_keyboard_bg)
         dlg.exec_()
+        self.e_command = e_command_before
 
     def switch_input(self, sender: QPushButton):
         tabs = {
@@ -132,7 +185,7 @@ class MainWindow(QMainWindow):
         obj_name = sender.objectName()
         bind = obj_name if obj_name not in exceptions else exceptions[obj_name]
 
-        self.set_bind(self.e_command, bind=bind)
+        self.set_command_data(self.e_command, bind=bind)
         commands = {"-": "pbMinus", "+": "pbPlus"}
         command = (
             "pb" + self.e_command
@@ -141,7 +194,13 @@ class MainWindow(QMainWindow):
         )
         for button in self.bgPickBind.buttons():
             if button.objectName() == command:
-                button.setText(bind)
+                result = self.dman.select(
+                    "name", self.e_profile, f'command = "{bind}"'
+                )
+                name = (
+                    result[0][0] if len(result) > 0 and result[0][0] else bind
+                )
+                button.setText(name)
 
     def create(self):
         # Open profile creation dialog
@@ -178,7 +237,7 @@ class MainWindow(QMainWindow):
         # Enable configurator and set current profile
         self.mainTabs.setTabEnabled(1, True)
         self.e_profile = self.lwProfiles.currentItem().text()
-        self.e_bind = None
+        self.e_command = None
         self.init_configurator()
 
     def delete(self):
@@ -189,15 +248,27 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event):
         self.dman.close()
 
-    def get_bind(self, command: str, default: str):
-        # Get existing bind or default value
-        bind = self.dman.select(
-            "bind", self.e_profile, f'command = "{command}"'
+    def get_command_data(
+        self, command: str, default: str, field: str = "bind"
+    ):
+        # Get existing field or default value
+        field = self.dman.select(
+            field, self.e_profile, f'command = "{command}"'
         )
-        return bind[0][0] if len(bind) > 0 else default
+        return (
+            field[0][0]
+            if len(field) > 0 and field[0][0] is not None
+            else default
+        )
 
-    def set_bind(
-        self, command: str, chord=None, action=None, bind=None, event=None
+    def set_command_data(
+        self,
+        command: str,
+        chord=None,
+        action=None,
+        bind=None,
+        event=None,
+        name=None,
     ):
         # Update an existing bind
         if (
@@ -211,13 +282,15 @@ class MainWindow(QMainWindow):
                 ("action", action),
                 ("bind", bind),
                 ("event", event),
+                ("name", name),
             ):
-                self.dman.update(
-                    self.e_profile, field, value, f'command = "{command}"'
-                )
+                if value:
+                    self.dman.update(
+                        self.e_profile, field, value, f'command = "{command}"'
+                    )
         else:
             self.dman.insert(
-                self.e_profile, (command, chord, action, bind, event)
+                self.e_profile, (command, chord, action, bind, event, name)
             )
 
     def init_configurator(self):
@@ -230,8 +303,13 @@ class MainWindow(QMainWindow):
                 if button.objectName() not in special
                 else special[button.objectName()]
             )
+            result = self.dman.select(
+                "name", self.e_profile, f'command = "{name}"'
+            )
+            if len(result) > 0 and result[0][0] is not None:
+                name = result[0][0]
             # Change button's text according to it's bind in profile
-            button.setText(self.get_bind(name, "None"))
+            button.setText(self.get_command_data(name, "None"))
 
         # Init joysticks
         modes = {
@@ -245,41 +323,49 @@ class MainWindow(QMainWindow):
             "SCROLL_WHEEL": 7,
         }
         self.cbRmode.setCurrentIndex(
-            modes[self.get_bind("RIGHT_STICK_MODE", "AIM")]
+            modes[self.get_command_data("RIGHT_STICK_MODE", "AIM")]
         )
         self.cbLmode.setCurrentIndex(
-            modes[self.get_bind("LEFT_STICK_MODE", "NO_MOUSE")]
+            modes[self.get_command_data("LEFT_STICK_MODE", "NO_MOUSE")]
         )
 
         # Init gyro
-        self.leRWC.setText(str(self.get_bind("REAL_WORLD_CALIBRATION", "45")))
-        self.leSens.setText(str(self.get_bind("IN_GAME_SENS", "1")))
+        self.leRWC.setText(
+            str(self.get_command_data("REAL_WORLD_CALIBRATION", "45"))
+        )
+        self.leSens.setText(str(self.get_command_data("IN_GAME_SENS", "1")))
         auto_calibrate = {"ON": True, "OFF": False}
         self.chAutoCalibrate.setChecked(
-            auto_calibrate[self.get_bind("AUTO_CALIBRATE", "OFF")]
+            auto_calibrate[self.get_command_data("AUTO_CALIBRATE", "OFF")]
         )
-        self.chAccel.setChecked(bool(self.get_bind("accel", "True")))
+        self.chAccel.setChecked(bool(self.get_command_data("accel", "True")))
         self.on_accel_change(self.chAccel.isChecked())
 
         self.leGyroSens.setText(
-            str(self.get_bind("GYRO_SENS", "3 3").split()[0])
+            str(self.get_command_data("GYRO_SENS", "3 3").split()[0])
         )
-        self.chVSens.setChecked(bool(self.get_bind("v_sens", "")))
-        self.leVSens.setText(str(self.get_bind("GYRO_SENS", "3 3").split()[1]))
+        self.chVSens.setChecked(bool(self.get_command_data("v_sens", "")))
+        self.leVSens.setText(
+            str(self.get_command_data("GYRO_SENS", "3 3").split()[1])
+        )
 
         self.leMinGyroSens.setText(
-            str(self.get_bind("MIN_GYRO_SENS", "2 2").split()[0])
+            str(self.get_command_data("MIN_GYRO_SENS", "2 2").split()[0])
         )
-        self.chMinVSens.setChecked(bool(self.get_bind("min_v_sens", "")))
-        self.chMaxVSens.setChecked(bool(self.get_bind("max_v_sens", "")))
+        self.chMinVSens.setChecked(
+            bool(self.get_command_data("min_v_sens", ""))
+        )
+        self.chMaxVSens.setChecked(
+            bool(self.get_command_data("max_v_sens", ""))
+        )
         self.leMaxGyroSens.setText(
-            str(self.get_bind("MAX_GYRO_SENS", "4 4").split()[1])
+            str(self.get_command_data("MAX_GYRO_SENS", "4 4").split()[1])
         )
         self.leMinThreshold.setText(
-            str(self.get_bind("MIN_GYRO_THRESHOLD", "0"))
+            str(self.get_command_data("MIN_GYRO_THRESHOLD", "0"))
         )
         self.leMaxThreshold.setText(
-            str(self.get_bind("MAX_GYRO_THRESHOLD", "75"))
+            str(self.get_command_data("MAX_GYRO_THRESHOLD", "75"))
         )
 
     def on_accel_change(self, state: bool):
@@ -317,7 +403,7 @@ class MainWindow(QMainWindow):
             if self.sender().objectName() == "cbRmode"
             else "LEFT_STICK_MODE"
         )
-        self.set_bind(mode, bind=modes[value])
+        self.set_command_data(mode, bind=modes[value])
 
     def on_gyro_le(self):
         value = self.sender().text()
@@ -355,7 +441,7 @@ class MainWindow(QMainWindow):
         }
         obj_name = self.sender().objectName()
         if obj_name in v_sens_h:
-            h_sens = self.get_bind(
+            h_sens = self.get_command_data(
                 v_sens_h[obj_name],
                 f"{default_sens[v_sens_h[obj_name]]} {value}",
             ).split()[0]
@@ -369,13 +455,13 @@ class MainWindow(QMainWindow):
             value = " ".join(
                 (
                     value,
-                    self.get_bind(
+                    self.get_command_data(
                         h_sens_v[obj_name], f"{value} {value}"
                     ).split()[1],
                 )
             )
 
-        self.set_bind(commands[obj_name], bind=str(value))
+        self.set_command_data(commands[obj_name], bind=str(value))
 
     def on_gyro_ch(self):
         commands = {
@@ -399,7 +485,7 @@ class MainWindow(QMainWindow):
         else:
             self.on_accel_change(sender.isChecked())
 
-        self.set_bind(commands[sender.objectName()], bind=value)
+        self.set_command_data(commands[sender.objectName()], bind=value)
 
 
 if __name__ == "__main__":

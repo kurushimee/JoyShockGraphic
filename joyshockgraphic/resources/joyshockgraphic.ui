@@ -5389,7 +5389,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
-               <widget class="QLabel" name="label_3">
+               <widget class="QLabel" name="lAction">
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
@@ -5441,7 +5441,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
-               <widget class="QLabel" name="label_4">
+               <widget class="QLabel" name="lChord">
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
@@ -5481,7 +5481,7 @@
             <item>
              <widget class="Line" name="line_17">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -5503,55 +5503,6 @@
               </property>
               <property name="text">
                <string>Rename command...</string>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">bgConfig</string>
-              </attribute>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pbAdd">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Choose display name for the command&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string>Add extra command</string>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">bgConfig</string>
-              </attribute>
-             </widget>
-            </item>
-            <item>
-             <widget class="Line" name="line_63">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pbRemove">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Choose display name for the command&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string>Remove command</string>
               </property>
               <attribute name="buttonGroup">
                <string notr="true">bgConfig</string>

@@ -15,7 +15,8 @@ class DManager:
                                 chord    STRING,
                                 [action] STRING,
                                 bind     STRING,
-                                event    STRING
+                                event    STRING,
+                                name     STRING
                              );"""
         )
         # Create a new profile entry in the profiles table
