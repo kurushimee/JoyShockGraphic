@@ -29,6 +29,7 @@ class MainWindow(QMainWindow):
         self.bgSwitchInput.buttonClicked.connect(self.switch_input)
 
         # Connect rest of the controls
+        self.pbChord.clicked.connect(self.on_chord_pick)
         # Joysticks
         self.cbRmode.currentIndexChanged.connect(self.on_stick_mode_change)
         self.cbLmode.currentIndexChanged.connect(self.on_stick_mode_change)
@@ -208,10 +209,18 @@ class MainWindow(QMainWindow):
             self, "Advanced binding", "Custom binding:"
         )
         if ok:
+            exclusions = {"-": "Minus", "+": "Plus"}
+            command = (
+                self.e_command
+                if self.e_command not in exclusions
+                else exclusions[self.e_command]
+            )
             for button in self.bgPickBind.buttons():
-                if button.objectName() == "pb" + self.e_command:
-                    self.set_command_data(self.e_command, name=bind)
-                    button.setText(bind)
+                if button.objectName() == "pb" + command:
+                    self.set_command_data(self.e_command, bind=bind)
+                    button.setText(
+                        self.get_command_data(self.e_command, bind, "name")
+                    )
 
     def create(self):
         # Open profile creation dialog
@@ -304,6 +313,9 @@ class MainWindow(QMainWindow):
                 self.e_profile, (command, chord, action, bind, event, name)
             )
 
+        # Export profile to .txt
+        self.dman.export_profile(self.e_profile)
+
     def init_configurator(self):
         # Init buttons
         special = {"pbMinus": "-", "pbPlus": "+"}
@@ -378,6 +390,9 @@ class MainWindow(QMainWindow):
         self.leMaxThreshold.setText(
             str(self.get_command_data("MAX_GYRO_THRESHOLD", "75"))
         )
+
+    def on_chord_pick(self, sender: QPushButton):
+        pass
 
     def on_accel_change(self, state: bool):
         self.lGyroSens.setEnabled(not state)

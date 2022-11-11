@@ -58,6 +58,49 @@ class DManager:
             f'display_name = "{display_name}" AND file_name = "{file_name}"',
         )
 
+    def export_profile(self, profile):
+        with open(f"AutoLoad/{profile}.txt", "w+") as f:
+            # Collect commands from the profile
+            commands = dict()
+            for result in self.select("command", profile):
+                if len(result) == 0:
+                    continue
+                chord = self.select(
+                    "chord", profile, f'command = "{result[0]}"'
+                )
+                chord = chord[0][0] if len(chord) > 0 and chord[0][0] else ""
+                command = (
+                    ",".join((result[0], chord[0][0]))
+                    if len(chord) > 0
+                    else result[0]
+                )
+                if command not in commands:
+                    commands[command] = []
+                if len(chord) > 0:
+                    chord = f'= "{chord}"'
+                else:
+                    chord = "IS NULL"
+                result = self.select(
+                    "action, bind, event",
+                    profile,
+                    f'command = "{result[0]}" AND chord {chord}',
+                )
+                if len(result) > 0:
+                    bind = list()
+                    for x in result[0]:
+                        if x is not None:
+                            bind.append(x)
+                    commands[command].append("".join(bind))
+
+            # Generate a profile string
+            write = "RESET_MAPPINGS\n"
+            for key, value in commands.items():
+                value = " ".join(value)
+                value = key if len(value) == 0 else f"{key} = {value}"
+                write += value + "\n"
+
+            f.write(write)
+
     def select(self, field: str, table: str, condition=""):
         # Select entries from the database
         if condition != "":
