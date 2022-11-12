@@ -176,7 +176,7 @@
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/controls/switch/Switch_A.png</normaloff>icons/controls/switch/Switch_A.png</iconset>
+                <normaloff>../icons/controls/switch/Switch_A.png</normaloff>../icons/controls/switch/Switch_A.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -219,7 +219,7 @@
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/controls/switch/Switch_Dpad.png</normaloff>icons/controls/switch/Switch_Dpad.png</iconset>
+                <normaloff>../icons/controls/switch/Switch_Dpad.png</normaloff>../icons/controls/switch/Switch_Dpad.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -259,7 +259,7 @@
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/controls/switch/Switch_LT.png</normaloff>icons/controls/switch/Switch_LT.png</iconset>
+                <normaloff>../icons/controls/switch/Switch_LT.png</normaloff>../icons/controls/switch/Switch_LT.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -299,7 +299,7 @@
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/controls/switch/Switch_Left_Stick.png</normaloff>icons/controls/switch/Switch_Left_Stick.png</iconset>
+                <normaloff>../icons/controls/switch/Switch_Left_Stick.png</normaloff>../icons/controls/switch/Switch_Left_Stick.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -339,7 +339,7 @@
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/controls/dualshock4/PS4_Touch_Pad.png</normaloff>icons/controls/dualshock4/PS4_Touch_Pad.png</iconset>
+                <normaloff>../icons/controls/dualshock4/PS4_Touch_Pad.png</normaloff>../icons/controls/dualshock4/PS4_Touch_Pad.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -379,7 +379,7 @@
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/controls/gyro.png</normaloff>icons/controls/gyro.png</iconset>
+                <normaloff>../icons/controls/gyro.png</normaloff>../icons/controls/gyro.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -476,7 +476,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/positional/Positional_Prompts_Down.png</pixmap>
+                       <pixmap>../icons/controls/positional/Positional_Prompts_Down.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -530,7 +530,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -569,7 +569,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/positional/Positional_Prompts_Right.png</pixmap>
+                       <pixmap>../icons/controls/positional/Positional_Prompts_Right.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -623,7 +623,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -662,7 +662,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/positional/Positional_Prompts_Left.png</pixmap>
+                       <pixmap>../icons/controls/positional/Positional_Prompts_Left.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -716,7 +716,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -755,7 +755,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/positional/Positional_Prompts_Up.png</pixmap>
+                       <pixmap>../icons/controls/positional/Positional_Prompts_Up.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -809,7 +809,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -869,7 +869,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LB.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LB.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -923,7 +923,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -962,7 +962,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RB.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RB.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1016,7 +1016,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1076,7 +1076,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LSL.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LSL.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1130,7 +1130,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1169,7 +1169,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LSR.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LSR.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1223,7 +1223,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1262,7 +1262,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RSL.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RSL.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1316,7 +1316,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1355,7 +1355,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RSR.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RSR.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1409,7 +1409,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1469,7 +1469,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Minus.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Minus.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1523,7 +1523,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1562,7 +1562,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Plus.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Plus.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1616,7 +1616,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1655,7 +1655,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Square.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Square.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1709,7 +1709,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1748,7 +1748,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Home.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Home.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1802,7 +1802,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1841,7 +1841,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/dualsense/PS5_Microphone.png</pixmap>
+                       <pixmap>../icons/controls/dualsense/PS5_Microphone.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -1895,7 +1895,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1994,7 +1994,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Dpad_Up.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Dpad_Up.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2048,7 +2048,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2087,7 +2087,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Dpad_Left.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Dpad_Left.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2141,7 +2141,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2180,7 +2180,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Dpad_Down.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Dpad_Down.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2234,7 +2234,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2273,7 +2273,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Dpad_Right.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Dpad_Right.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2327,7 +2327,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2426,7 +2426,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2492,7 +2492,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2531,7 +2531,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2597,7 +2597,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2657,7 +2657,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2723,7 +2723,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2762,7 +2762,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2828,7 +2828,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2883,7 +2883,7 @@
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>0</y>
+                   <y>-89</y>
                    <width>706</width>
                    <height>902</height>
                   </rect>
@@ -2927,7 +2927,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RUP.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RUP.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2981,7 +2981,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3020,7 +3020,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RLEFT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RLEFT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3074,7 +3074,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3113,7 +3113,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RDOWN.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RDOWN.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3167,7 +3167,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3206,7 +3206,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_RRIGHT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_RRIGHT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3260,7 +3260,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3299,7 +3299,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Right_Stick.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Right_Stick.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3353,7 +3353,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3392,7 +3392,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Right_Stick.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Right_Stick.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3458,7 +3458,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3603,7 +3603,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LUP.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LUP.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3657,7 +3657,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3696,7 +3696,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LLEFT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LLEFT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3750,7 +3750,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3789,7 +3789,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LDOWN.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LDOWN.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3843,7 +3843,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3882,7 +3882,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_LRIGHT.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_LRIGHT.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -3936,7 +3936,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3975,7 +3975,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Left_Stick.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Left_Stick.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -4029,7 +4029,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4068,7 +4068,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/switch/Switch_Left_Stick.png</pixmap>
+                       <pixmap>../icons/controls/switch/Switch_Left_Stick.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -4134,7 +4134,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4321,7 +4321,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/dualshock4/PS4_Touch_Pad.png</pixmap>
+                       <pixmap>../icons/controls/dualshock4/PS4_Touch_Pad.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -4387,7 +4387,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4426,7 +4426,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/dualshock4/PS4_Touch_Pad.png</pixmap>
+                       <pixmap>../icons/controls/dualshock4/PS4_Touch_Pad.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -4492,7 +4492,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4531,7 +4531,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>icons/controls/dualshock4/PS4_Touch_Pad.png</pixmap>
+                       <pixmap>../icons/controls/dualshock4/PS4_Touch_Pad.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -4597,7 +4597,7 @@
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/cogwheel.png</normaloff>icons/cogwheel.png</iconset>
+                        <normaloff>../icons/cogwheel.png</normaloff>../icons/cogwheel.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -5589,7 +5589,7 @@
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap>icons/joyshockgraphic.ico</pixmap>
+                 <pixmap>../icons/joyshockgraphic.ico</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -5703,10 +5703,10 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="bgSwitchInput"/>
-  <buttongroup name="bgPickBind"/>
-  <buttongroup name="bgConfig"/>
   <buttongroup name="bgLibrary"/>
+  <buttongroup name="bgPickBind"/>
   <buttongroup name="bgLoadInput"/>
+  <buttongroup name="bgConfig"/>
+  <buttongroup name="bgSwitchInput"/>
  </buttongroups>
 </ui>

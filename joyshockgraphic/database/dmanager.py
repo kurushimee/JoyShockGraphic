@@ -1,3 +1,4 @@
+import os
 import sqlite3
 
 
@@ -89,7 +90,7 @@ class DManager:
                     bind = list()
                     for x in result[0]:
                         if x is not None:
-                            bind.append(x)
+                            bind.append(str(x))
                     commands[command].append("".join(bind))
 
             # Generate a profile string

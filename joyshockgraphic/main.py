@@ -1,6 +1,6 @@
 import sys
 
-from joyshockgraphic.data.dmanager import DManager
+from joyshockgraphic.database.dmanager import DManager
 from joyshockgraphic.ui.main_window import Ui_MainWindow
 from PyQt5 import uic
 from PyQt5.QtWidgets import (
@@ -12,11 +12,11 @@ from PyQt5.QtWidgets import (
 
 
 class Main(QMainWindow, Ui_MainWindow):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
 
-        # Initialise data
+        # Initialise database
         self.db = DManager()
         self.e_profile = None
         self.e_command = None
@@ -117,7 +117,7 @@ class Main(QMainWindow, Ui_MainWindow):
         self.lChord.setEnabled(True)
         self.pbChord.setEnabled(True)
         self.pbRename.setEnabled(True)
-        # Load command data
+        # Load command database
         events = {
             "0": 0,
             "\\": 1,
@@ -142,7 +142,7 @@ class Main(QMainWindow, Ui_MainWindow):
         )
 
     def pick_bind(self, sender: QPushButton):
-        dlg = uic.loadUi("joyshockgraphic/resources/bind_pick.ui")
+        dlg = uic.loadUi("joyshockgraphic/resources/ui/bind_pick.ui")
         exceptions = {"pbMinus": "-", "pbPlus": "+"}
         obj_name = sender.objectName()
         e_command_before = self.e_command
@@ -229,7 +229,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
     def create_profile(self):
         # Open profile creation dialog
-        dlg = uic.loadUi("joyshockgraphic/resources/profile.ui")
+        dlg = uic.loadUi("joyshockgraphic/resources/ui/profile.ui")
         ok = dlg.exec_()
         if ok:
             # Create profile
@@ -241,7 +241,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
     def edit_profile(self):
         # Open profile creation dialog
-        dlg = uic.loadUi("joyshockgraphic/resources/profile.ui")
+        dlg = uic.loadUi("joyshockgraphic/resources/ui/profile.ui")
         ok = dlg.exec_()
         if ok:
             display_name = self.lwProfiles.currentItem().text()
@@ -261,7 +261,9 @@ class Main(QMainWindow, Ui_MainWindow):
     def configure(self):
         # Enable configurator and set current profile
         self.mainTabs.setTabEnabled(1, True)
-        self.e_profile = self.lwProfiles.currentItem().text()
+        display_name = self.lwProfiles.currentItem().text()
+        file_name = self.db.select("file_name", "profiles", f'display_name = "{display_name}"')[0][0]
+        self.e_profile = file_name
         self.e_command = None
         self.init_configurator()
 
@@ -337,7 +339,7 @@ class Main(QMainWindow, Ui_MainWindow):
             )
             name = result[0][0] if len(result) > 0 and result[0][0] else name
             # Change button's text according to it's bind in profile
-            button.setText(name)
+            button.setText(str(name))
 
         # Init joysticks
         modes = {

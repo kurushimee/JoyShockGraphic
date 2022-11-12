@@ -752,7 +752,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Mouse_Left_Key_Dark.png</normaloff>icons/controls/kbm/Mouse_Left_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Mouse_Left_Key_Dark.png</normaloff>icons/controls/kbm/Mouse_Left_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -790,7 +790,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Mouse_Right_Key_Dark.png</normaloff>icons/controls/kbm/Mouse_Right_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Mouse_Right_Key_Dark.png</normaloff>icons/controls/kbm/Mouse_Right_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -828,7 +828,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Mouse_Middle_Key_Dark.png</normaloff>icons/controls/kbm/Mouse_Middle_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Mouse_Middle_Key_Dark.png</normaloff>icons/controls/kbm/Mouse_Middle_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1010,7 +1010,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Esc_Key_Dark.png</normaloff>icons/controls/kbm/Esc_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Esc_Key_Dark.png</normaloff>icons/controls/kbm/Esc_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1054,7 +1054,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Tilda_Key_Dark.png</normaloff>icons/controls/kbm/Tilda_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Tilda_Key_Dark.png</normaloff>icons/controls/kbm/Tilda_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1098,7 +1098,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Tab_Key_Dark.png</normaloff>icons/controls/kbm/Tab_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Tab_Key_Dark.png</normaloff>icons/controls/kbm/Tab_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1142,7 +1142,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Caps_Lock_Key_Dark.png</normaloff>icons/controls/kbm/Caps_Lock_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Caps_Lock_Key_Dark.png</normaloff>icons/controls/kbm/Caps_Lock_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1186,7 +1186,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Shift_Key_Dark.png</normaloff>icons/controls/kbm/Shift_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Shift_Key_Dark.png</normaloff>icons/controls/kbm/Shift_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1230,7 +1230,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Ctrl_Key_Dark.png</normaloff>icons/controls/kbm/Ctrl_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Ctrl_Key_Dark.png</normaloff>icons/controls/kbm/Ctrl_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1274,7 +1274,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/1_Key_Dark.png</normaloff>icons/controls/kbm/1_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/1_Key_Dark.png</normaloff>icons/controls/kbm/1_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1318,7 +1318,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/2_Key_Dark.png</normaloff>icons/controls/kbm/2_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/2_Key_Dark.png</normaloff>icons/controls/kbm/2_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1362,7 +1362,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/3_Key_Dark.png</normaloff>icons/controls/kbm/3_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/3_Key_Dark.png</normaloff>icons/controls/kbm/3_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1406,7 +1406,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/4_Key_Dark.png</normaloff>icons/controls/kbm/4_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/4_Key_Dark.png</normaloff>icons/controls/kbm/4_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1450,7 +1450,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/5_Key_Dark.png</normaloff>icons/controls/kbm/5_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/5_Key_Dark.png</normaloff>icons/controls/kbm/5_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1494,7 +1494,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/6_Key_Dark.png</normaloff>icons/controls/kbm/6_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/6_Key_Dark.png</normaloff>icons/controls/kbm/6_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1538,7 +1538,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/7_Key_Dark.png</normaloff>icons/controls/kbm/7_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/7_Key_Dark.png</normaloff>icons/controls/kbm/7_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1582,7 +1582,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/8_Key_Dark.png</normaloff>icons/controls/kbm/8_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/8_Key_Dark.png</normaloff>icons/controls/kbm/8_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1626,7 +1626,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/9_Key_Dark.png</normaloff>icons/controls/kbm/9_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/9_Key_Dark.png</normaloff>icons/controls/kbm/9_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1670,7 +1670,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/0_Key_Dark.png</normaloff>icons/controls/kbm/0_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/0_Key_Dark.png</normaloff>icons/controls/kbm/0_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1714,7 +1714,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Minus_Key_Dark.png</normaloff>icons/controls/kbm/Minus_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Minus_Key_Dark.png</normaloff>icons/controls/kbm/Minus_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1758,7 +1758,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Plus_Key_Dark.png</normaloff>icons/controls/kbm/Plus_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Plus_Key_Dark.png</normaloff>icons/controls/kbm/Plus_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1802,7 +1802,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Backspace_Alt_Key_Dark.png</normaloff>icons/controls/kbm/Backspace_Alt_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Backspace_Alt_Key_Dark.png</normaloff>icons/controls/kbm/Backspace_Alt_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1846,7 +1846,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Q_Key_Dark.png</normaloff>icons/controls/kbm/Q_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Q_Key_Dark.png</normaloff>icons/controls/kbm/Q_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1890,7 +1890,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/W_Key_Dark.png</normaloff>icons/controls/kbm/W_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/W_Key_Dark.png</normaloff>icons/controls/kbm/W_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1934,7 +1934,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/E_Key_Dark.png</normaloff>icons/controls/kbm/E_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/E_Key_Dark.png</normaloff>icons/controls/kbm/E_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1978,7 +1978,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/R_Key_Dark.png</normaloff>icons/controls/kbm/R_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/R_Key_Dark.png</normaloff>icons/controls/kbm/R_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2022,7 +2022,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/T_Key_Dark.png</normaloff>icons/controls/kbm/T_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/T_Key_Dark.png</normaloff>icons/controls/kbm/T_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2066,7 +2066,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Y_Key_Dark.png</normaloff>icons/controls/kbm/Y_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Y_Key_Dark.png</normaloff>icons/controls/kbm/Y_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2110,7 +2110,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/U_Key_Dark.png</normaloff>icons/controls/kbm/U_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/U_Key_Dark.png</normaloff>icons/controls/kbm/U_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2154,7 +2154,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/I_Key_Dark.png</normaloff>icons/controls/kbm/I_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/I_Key_Dark.png</normaloff>icons/controls/kbm/I_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2198,7 +2198,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/O_Key_Dark.png</normaloff>icons/controls/kbm/O_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/O_Key_Dark.png</normaloff>icons/controls/kbm/O_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2242,7 +2242,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/P_Key_Dark.png</normaloff>icons/controls/kbm/P_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/P_Key_Dark.png</normaloff>icons/controls/kbm/P_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2286,7 +2286,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Bracket_Left_Key_Dark.png</normaloff>icons/controls/kbm/Bracket_Left_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Bracket_Left_Key_Dark.png</normaloff>icons/controls/kbm/Bracket_Left_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2330,7 +2330,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Bracket_Right_Key_Dark.png</normaloff>icons/controls/kbm/Bracket_Right_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Bracket_Right_Key_Dark.png</normaloff>icons/controls/kbm/Bracket_Right_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2374,7 +2374,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Slash_Key_Dark.png</normaloff>icons/controls/kbm/Slash_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Slash_Key_Dark.png</normaloff>icons/controls/kbm/Slash_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2418,7 +2418,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/A_Key_Dark.png</normaloff>icons/controls/kbm/A_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/A_Key_Dark.png</normaloff>icons/controls/kbm/A_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2462,7 +2462,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/S_Key_Dark.png</normaloff>icons/controls/kbm/S_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/S_Key_Dark.png</normaloff>icons/controls/kbm/S_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2506,7 +2506,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/D_Key_Dark.png</normaloff>icons/controls/kbm/D_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/D_Key_Dark.png</normaloff>icons/controls/kbm/D_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2550,7 +2550,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F_Key_Dark.png</normaloff>icons/controls/kbm/F_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F_Key_Dark.png</normaloff>icons/controls/kbm/F_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2594,7 +2594,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/G_Key_Dark.png</normaloff>icons/controls/kbm/G_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/G_Key_Dark.png</normaloff>icons/controls/kbm/G_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2638,7 +2638,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/H_Key_Dark.png</normaloff>icons/controls/kbm/H_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/H_Key_Dark.png</normaloff>icons/controls/kbm/H_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2682,7 +2682,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/J_Key_Dark.png</normaloff>icons/controls/kbm/J_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/J_Key_Dark.png</normaloff>icons/controls/kbm/J_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2726,7 +2726,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/K_Key_Dark.png</normaloff>icons/controls/kbm/K_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/K_Key_Dark.png</normaloff>icons/controls/kbm/K_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2770,7 +2770,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/L_Key_Dark.png</normaloff>icons/controls/kbm/L_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/L_Key_Dark.png</normaloff>icons/controls/kbm/L_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2814,7 +2814,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Semicolon_Key_Dark.png</normaloff>icons/controls/kbm/Semicolon_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Semicolon_Key_Dark.png</normaloff>icons/controls/kbm/Semicolon_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2858,7 +2858,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Quote_Key_Dark.png</normaloff>icons/controls/kbm/Quote_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Quote_Key_Dark.png</normaloff>icons/controls/kbm/Quote_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2902,7 +2902,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Enter_Alt_Key_Dark.png</normaloff>icons/controls/kbm/Enter_Alt_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Enter_Alt_Key_Dark.png</normaloff>icons/controls/kbm/Enter_Alt_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2946,7 +2946,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Z_Key_Dark.png</normaloff>icons/controls/kbm/Z_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Z_Key_Dark.png</normaloff>icons/controls/kbm/Z_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2990,7 +2990,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/X_Key_Dark.png</normaloff>icons/controls/kbm/X_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/X_Key_Dark.png</normaloff>icons/controls/kbm/X_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3034,7 +3034,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/C_Key_Dark.png</normaloff>icons/controls/kbm/C_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/C_Key_Dark.png</normaloff>icons/controls/kbm/C_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3078,7 +3078,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/V_Key_Dark.png</normaloff>icons/controls/kbm/V_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/V_Key_Dark.png</normaloff>icons/controls/kbm/V_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3122,7 +3122,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/B_Key_Dark.png</normaloff>icons/controls/kbm/B_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/B_Key_Dark.png</normaloff>icons/controls/kbm/B_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3166,7 +3166,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/N_Key_Dark.png</normaloff>icons/controls/kbm/N_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/N_Key_Dark.png</normaloff>icons/controls/kbm/N_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3210,7 +3210,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/M_Key_Dark.png</normaloff>icons/controls/kbm/M_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/M_Key_Dark.png</normaloff>icons/controls/kbm/M_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3254,7 +3254,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Mark_Left_Key_Dark.png</normaloff>icons/controls/kbm/Mark_Left_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Mark_Left_Key_Dark.png</normaloff>icons/controls/kbm/Mark_Left_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3298,7 +3298,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Mark_Right_Key_Dark.png</normaloff>icons/controls/kbm/Mark_Right_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Mark_Right_Key_Dark.png</normaloff>icons/controls/kbm/Mark_Right_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3342,7 +3342,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Question_Key_Dark.png</normaloff>icons/controls/kbm/Question_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Question_Key_Dark.png</normaloff>icons/controls/kbm/Question_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3386,7 +3386,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Shift_Key_Dark.png</normaloff>icons/controls/kbm/Shift_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Shift_Key_Dark.png</normaloff>icons/controls/kbm/Shift_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3430,7 +3430,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Win_Key_Dark.png</normaloff>icons/controls/kbm/Win_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Win_Key_Dark.png</normaloff>icons/controls/kbm/Win_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3474,7 +3474,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Alt_Key_Dark.png</normaloff>icons/controls/kbm/Alt_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Alt_Key_Dark.png</normaloff>icons/controls/kbm/Alt_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3518,7 +3518,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Space_Key_Dark.png</normaloff>icons/controls/kbm/Space_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Space_Key_Dark.png</normaloff>icons/controls/kbm/Space_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3562,7 +3562,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Alt_Key_Dark.png</normaloff>icons/controls/kbm/Alt_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Alt_Key_Dark.png</normaloff>icons/controls/kbm/Alt_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3606,7 +3606,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/Ctrl_Key_Dark.png</normaloff>icons/controls/kbm/Ctrl_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/Ctrl_Key_Dark.png</normaloff>icons/controls/kbm/Ctrl_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3650,7 +3650,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F1_Key_Dark.png</normaloff>icons/controls/kbm/F1_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F1_Key_Dark.png</normaloff>icons/controls/kbm/F1_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3694,7 +3694,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F2_Key_Dark.png</normaloff>icons/controls/kbm/F2_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F2_Key_Dark.png</normaloff>icons/controls/kbm/F2_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3738,7 +3738,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F3_Key_Dark.png</normaloff>icons/controls/kbm/F3_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F3_Key_Dark.png</normaloff>icons/controls/kbm/F3_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3782,7 +3782,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F4_Key_Dark.png</normaloff>icons/controls/kbm/F4_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F4_Key_Dark.png</normaloff>icons/controls/kbm/F4_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3826,7 +3826,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F5_Key_Dark.png</normaloff>icons/controls/kbm/F5_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F5_Key_Dark.png</normaloff>icons/controls/kbm/F5_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3870,7 +3870,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F6_Key_Dark.png</normaloff>icons/controls/kbm/F6_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F6_Key_Dark.png</normaloff>icons/controls/kbm/F6_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3914,7 +3914,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F7_Key_Dark.png</normaloff>icons/controls/kbm/F7_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F7_Key_Dark.png</normaloff>icons/controls/kbm/F7_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3958,7 +3958,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F8_Key_Dark.png</normaloff>icons/controls/kbm/F8_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F8_Key_Dark.png</normaloff>icons/controls/kbm/F8_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -4002,7 +4002,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F9_Key_Dark.png</normaloff>icons/controls/kbm/F9_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F9_Key_Dark.png</normaloff>icons/controls/kbm/F9_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -4046,7 +4046,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F10_Key_Dark.png</normaloff>icons/controls/kbm/F10_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F10_Key_Dark.png</normaloff>icons/controls/kbm/F10_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -4090,7 +4090,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F11_Key_Dark.png</normaloff>icons/controls/kbm/F11_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F11_Key_Dark.png</normaloff>icons/controls/kbm/F11_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -4134,7 +4134,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>icons/controls/kbm/F12_Key_Dark.png</normaloff>icons/controls/kbm/F12_Key_Dark.png</iconset>
+         <normaloff>../icons/controls/kbm/F12_Key_Dark.png</normaloff>icons/controls/kbm/F12_Key_Dark.png</iconset>
        </property>
        <property name="iconSize">
         <size>
