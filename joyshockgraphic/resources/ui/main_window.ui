@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="mainTabs">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="libraryTab">
        <attribute name="title">
@@ -497,6 +497,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lS">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbS">
                       <property name="minimumSize">
                        <size>
@@ -538,9 +550,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbSAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -590,6 +628,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lE">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbE">
                       <property name="minimumSize">
                        <size>
@@ -631,9 +681,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbEAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -683,6 +759,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lW">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbW">
                       <property name="minimumSize">
                        <size>
@@ -724,9 +812,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbWAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -776,6 +890,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lN">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbN">
                       <property name="minimumSize">
                        <size>
@@ -817,9 +943,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbNAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -890,6 +1042,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lL">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbL">
                       <property name="minimumSize">
                        <size>
@@ -931,9 +1095,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -983,6 +1173,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lR">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbR">
                       <property name="minimumSize">
                        <size>
@@ -1024,9 +1226,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1097,6 +1325,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLSL">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLSL">
                       <property name="minimumSize">
                        <size>
@@ -1138,9 +1378,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLSLAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1190,6 +1456,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLSR">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLSR">
                       <property name="minimumSize">
                        <size>
@@ -1231,9 +1509,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLSRAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1283,6 +1587,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRSL">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRSL">
                       <property name="minimumSize">
                        <size>
@@ -1324,9 +1640,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRSLAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1376,6 +1718,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRSR">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRSR">
                       <property name="minimumSize">
                        <size>
@@ -1417,9 +1771,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRSRAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1490,6 +1870,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lMinus">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbMinus">
                       <property name="minimumSize">
                        <size>
@@ -1531,9 +1923,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbMinusAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1583,6 +2001,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lPlus">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbPlus">
                       <property name="minimumSize">
                        <size>
@@ -1624,9 +2054,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbPlusAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1676,6 +2132,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lCAPTURE">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbCAPTURE">
                       <property name="minimumSize">
                        <size>
@@ -1717,9 +2185,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbCAPTUREAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1769,6 +2263,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lHOME">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbHOME">
                       <property name="minimumSize">
                        <size>
@@ -1810,9 +2316,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbHOMEAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -1862,6 +2394,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lMIC">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbMIC">
                       <property name="minimumSize">
                        <size>
@@ -1903,9 +2447,35 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbMICAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2015,6 +2585,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lUP">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbUP">
                       <property name="minimumSize">
                        <size>
@@ -2056,9 +2638,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbUPAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2108,6 +2719,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLEFT">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLEFT">
                       <property name="minimumSize">
                        <size>
@@ -2149,9 +2772,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLEFTAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2201,6 +2853,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lDOWN">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbDOWN">
                       <property name="minimumSize">
                        <size>
@@ -2242,9 +2906,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbDOWNAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2294,6 +2987,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRIGHT">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRIGHT">
                       <property name="minimumSize">
                        <size>
@@ -2335,9 +3040,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRIGHTAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2459,6 +3193,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lZRF">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbZRF">
                       <property name="minimumSize">
                        <size>
@@ -2500,9 +3246,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbZRFAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2564,6 +3339,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lZR">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbZR">
                       <property name="minimumSize">
                        <size>
@@ -2605,9 +3392,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbZRAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2690,6 +3506,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lZLF">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbZLF">
                       <property name="minimumSize">
                        <size>
@@ -2731,9 +3559,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbZLFAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2795,6 +3652,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lZL">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbZL">
                       <property name="minimumSize">
                        <size>
@@ -2836,9 +3705,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbZLAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -2883,7 +3781,7 @@
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>-89</y>
+                   <y>0</y>
                    <width>706</width>
                    <height>902</height>
                   </rect>
@@ -2948,6 +3846,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRUP">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRUP">
                       <property name="minimumSize">
                        <size>
@@ -2989,9 +3899,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRUPAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3041,6 +3980,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRLEFT">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRLEFT">
                       <property name="minimumSize">
                        <size>
@@ -3082,9 +4033,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRLEFTAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3134,6 +4114,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRDOWN">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRDOWN">
                       <property name="minimumSize">
                        <size>
@@ -3175,9 +4167,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRDOWNAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3227,6 +4248,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRRIGHT">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRRIGHT">
                       <property name="minimumSize">
                        <size>
@@ -3268,9 +4301,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRRIGHTAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3320,6 +4382,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lR3">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbR3">
                       <property name="minimumSize">
                        <size>
@@ -3361,9 +4435,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbR3Add">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3425,6 +4528,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lRRING">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbRRING">
                       <property name="minimumSize">
                        <size>
@@ -3466,9 +4581,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbRRINGAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3624,6 +4768,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLUP">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLUP">
                       <property name="minimumSize">
                        <size>
@@ -3665,9 +4821,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLUPAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3717,6 +4902,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLLEFT">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLLEFT">
                       <property name="minimumSize">
                        <size>
@@ -3758,9 +4955,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLLEFTAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3810,6 +5036,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLDOWN">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLDOWN">
                       <property name="minimumSize">
                        <size>
@@ -3851,9 +5089,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLDOWNAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3903,6 +5170,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLRIGHT">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLRIGHT">
                       <property name="minimumSize">
                        <size>
@@ -3944,9 +5223,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLRIGHTAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3996,6 +5304,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lL3">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbL3">
                       <property name="minimumSize">
                        <size>
@@ -4037,9 +5357,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbL3Add">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -4101,6 +5450,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lLRING">
+                      <property name="font">
+                       <font>
+                        <pointsize>15</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbLRING">
                       <property name="minimumSize">
                        <size>
@@ -4142,9 +5503,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbLRINGAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -4354,6 +5744,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lTOUCH">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbTOUCH">
                       <property name="minimumSize">
                        <size>
@@ -4395,9 +5797,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbTOUCHAdd">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -4459,6 +5890,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lT2">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbT2">
                       <property name="minimumSize">
                        <size>
@@ -4500,9 +5943,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbT2Add">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -4564,6 +6036,18 @@
                      </spacer>
                     </item>
                     <item>
+                     <widget class="QLabel" name="lT1">
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pbT1">
                       <property name="minimumSize">
                        <size>
@@ -4605,9 +6089,38 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                       <attribute name="buttonGroup">
                        <string notr="true">bgLoadInput</string>
                       </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pbT1Add">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -5704,9 +7217,9 @@
  <connections/>
  <buttongroups>
   <buttongroup name="bgLibrary"/>
+  <buttongroup name="bgSwitchInput"/>
+  <buttongroup name="bgConfig"/>
   <buttongroup name="bgPickBind"/>
   <buttongroup name="bgLoadInput"/>
-  <buttongroup name="bgConfig"/>
-  <buttongroup name="bgSwitchInput"/>
  </buttongroups>
 </ui>
