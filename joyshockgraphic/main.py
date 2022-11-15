@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (
     QApplication,
     QMainWindow,
     QPushButton,
-    QInputDialog,
+    QInputDialog, QWidget,
 )
 
 
@@ -18,8 +18,9 @@ class Main(QMainWindow, Ui_MainWindow):
 
         # Initialise data
         self.db = DManager()
-        self.curr_profile = None  # Currently edited profile
-        self.curr_command = None  # Currently edited command
+        self.curr_prof = None  # Currently edited profile
+        self.curr_cmd = None  # Currently edited command
+        self.extra_cmds = dict()  # Extra commands
         # Dictionary for matching button names and commands
         self.exceptions = {"Minus": "-", "Plus": "+", "-": "Minus", "+": "Plus"}
 
@@ -29,6 +30,8 @@ class Main(QMainWindow, Ui_MainWindow):
         self.lwProfiles.itemSelectionChanged.connect(self.check_selection)
         # Handle profiles tab's buttons
         self.bgLibrary.buttonClicked.connect(self.configure_profiles)
+
+        # self.inputWidgets.findChild(QPushButton, "pbS").text()
 
         self.bgConfig.buttonClicked.connect(self.rename)
         self.bgLoadInput.buttonClicked.connect(self.load_input)
@@ -71,7 +74,7 @@ class Main(QMainWindow, Ui_MainWindow):
     def check_selection(self) -> None:
         current_item = self.lwProfiles.currentItem()
         profiles = [x[0] for x in self.db.select("display_name", "profiles")]
-        is_profile = current_item and current_item.text() in profiles
+        is_profile = bool(current_item and current_item.text() in profiles)
         if is_profile:
             # Call configurator initialisation
             self.configure()
@@ -94,14 +97,12 @@ class Main(QMainWindow, Ui_MainWindow):
 
     # This function renames command that is being edited
     def rename(self):
-        name, ok = QInputDialog.getText(
-            self, "Rename command", "New command name:"
-        )
+        name, ok = QInputDialog.getText(self, "Rename command", "New command name:")
         if ok:
-            command = self.correct_command_name(self.curr_command)
+            command = self.correct_command_name(self.curr_cmd)
             for button in self.bgPickBind.buttons():
                 if button.objectName() == "pb" + command:
-                    self.set_command_data(self.curr_command, name=name)
+                    self.set_command_data(self.curr_cmd, name=name)
                     button.setText(name)
 
     # Init UI
@@ -109,7 +110,7 @@ class Main(QMainWindow, Ui_MainWindow):
         # Set current command for editing
         exceptions = {"pbMinus": "-", "pbPlus": "+"}
         obj_name = sender.objectName()
-        self.curr_command = (
+        self.curr_cmd = (
             obj_name[2:-8]
             if obj_name not in exceptions
             else exceptions[obj_name]
@@ -131,7 +132,7 @@ class Main(QMainWindow, Ui_MainWindow):
             "+": 5,
         }
         self.cbEvent.setCurrentIndex(
-            events[self.get_command_data(self.curr_command, "0", "event")]
+            events[self.get_command_data(self.curr_cmd, "0", "event")]
         )
         actions = {
             "0": 0,
@@ -139,10 +140,10 @@ class Main(QMainWindow, Ui_MainWindow):
             "!": 2,
         }
         self.cbAction.setCurrentIndex(
-            actions[self.get_command_data(self.curr_command, "0", "action")]
+            actions[self.get_command_data(self.curr_cmd, "0", "action")]
         )
         self.pbChord.setText(
-            self.get_command_data(self.curr_command, "None", "chord")
+            self.get_command_data(self.curr_cmd, "None", "chord")
         )
 
     # Input UI
@@ -150,8 +151,8 @@ class Main(QMainWindow, Ui_MainWindow):
         dlg = uic.loadUi("joyshockgraphic/resources/ui/bind_pick.ui")
         exceptions = {"pbMinus": "-", "pbPlus": "+"}
         obj_name = sender.objectName()
-        e_command_before = self.curr_command
-        self.curr_command = (
+        e_command_before = self.curr_cmd
+        self.curr_cmd = (
             obj_name[2:]
             if obj_name not in exceptions
             else exceptions[obj_name]
@@ -159,7 +160,7 @@ class Main(QMainWindow, Ui_MainWindow):
         dlg.bgKeyboard.buttonClicked.connect(self.on_keyboard_bg)
         dlg.pbAdvanced.clicked.connect(self.on_advanced_bind)
         dlg.exec_()
-        self.curr_command = e_command_before
+        self.curr_cmd = e_command_before
 
     # Button group
     def switch_input(self, sender: QPushButton):
@@ -199,17 +200,17 @@ class Main(QMainWindow, Ui_MainWindow):
         obj_name = sender.objectName()
         bind = obj_name if obj_name not in exceptions else exceptions[obj_name]
 
-        self.set_command_data(self.curr_command, bind=bind)
+        self.set_command_data(self.curr_cmd, bind=bind)
         commands = {"-": "pbMinus", "+": "pbPlus"}
         command = (
-            "pb" + self.curr_command
-            if self.curr_command not in commands
-            else commands[self.curr_command]
+            "pb" + self.curr_cmd
+            if self.curr_cmd not in commands
+            else commands[self.curr_cmd]
         )
         for button in self.bgPickBind.buttons():
             if button.objectName() == command:
                 result = self.db.select(
-                    "name", self.curr_profile, f'command = "{bind}"'
+                    "name", self.curr_prof, f'command = "{bind}"'
                 )
                 name = (
                     result[0][0] if len(result) > 0 and result[0][0] else bind
@@ -224,15 +225,15 @@ class Main(QMainWindow, Ui_MainWindow):
         if ok:
             exclusions = {"-": "Minus", "+": "Plus"}
             command = (
-                self.curr_command
-                if self.curr_command not in exclusions
-                else exclusions[self.curr_command]
+                self.curr_cmd
+                if self.curr_cmd not in exclusions
+                else exclusions[self.curr_cmd]
             )
             for button in self.bgPickBind.buttons():
                 if button.objectName() == "pb" + command:
-                    self.set_command_data(self.curr_command, bind=bind)
+                    self.set_command_data(self.curr_cmd, bind=bind)
                     button.setText(
-                        self.get_command_data(self.curr_command, bind, "name")
+                        self.get_command_data(self.curr_cmd, bind, "name")
                     )
 
     # UI logic
@@ -274,8 +275,8 @@ class Main(QMainWindow, Ui_MainWindow):
         self.mainTabs.setTabEnabled(1, True)
         display_name = self.lwProfiles.currentItem().text()
         file_name = self.db.select("file_name", "profiles", f'display_name = "{display_name}"')[0][0]
-        self.curr_profile = file_name
-        self.curr_command = None
+        self.curr_prof = file_name
+        self.curr_cmd = None
         self.init_configurator()
 
     # UI logic
@@ -293,7 +294,7 @@ class Main(QMainWindow, Ui_MainWindow):
     ):
         # Get existing field or default value
         field = self.db.select(
-            field, self.curr_profile, f'command = "{command}"'
+            field, self.curr_prof, f'command = "{command}"'
         )
         return (
             field[0][0]
@@ -314,7 +315,7 @@ class Main(QMainWindow, Ui_MainWindow):
         # Update an existing bind
         if (
                 len(
-                    self.db.select("*", self.curr_profile, f'command = "{command}"')
+                    self.db.select("*", self.curr_prof, f'command = "{command}"')
                 )
                 > 0
         ):
@@ -327,15 +328,15 @@ class Main(QMainWindow, Ui_MainWindow):
             ):
                 if value:
                     self.db.update(
-                        self.curr_profile, field, value, f'command = "{command}"'
+                        self.curr_prof, field, value, f'command = "{command}"'
                     )
         else:
             self.db.insert(
-                self.curr_profile, (command, chord, action, bind, event, name)
+                self.curr_prof, (command, chord, action, bind, event, name)
             )
 
         # Export profile to .txt
-        self.db.export_profile(self.curr_profile)
+        self.db.export_profile(self.curr_prof)
 
     # Init UI (heavy)
     def init_configurator(self):
@@ -350,7 +351,7 @@ class Main(QMainWindow, Ui_MainWindow):
             )
             name = self.get_command_data(command, "None")
             result = self.db.select(
-                "name", self.curr_profile, f'command = "{command}"'
+                "name", self.curr_prof, f'command = "{command}"'
             )
             name = result[0][0] if len(result) > 0 and result[0][0] else name
             # Change button's text according to it's bind in profile
@@ -539,6 +540,11 @@ class Main(QMainWindow, Ui_MainWindow):
             self.on_accel_change(sender.isChecked())
 
         self.set_command_data(commands[sender.objectName()], bind=value)
+
+    # This function adds a widget for an extra command
+    def add_cmd(self, object_name: str, cmd_id: str) -> QWidget:
+        # TODO: Think further about how to create extra commands
+        pass
 
 
 if __name__ == "__main__":

@@ -579,6 +579,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -710,6 +713,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -841,6 +847,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -972,6 +981,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -1124,6 +1136,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -1255,6 +1270,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -1407,6 +1425,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -1538,6 +1559,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -1669,6 +1693,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -1800,6 +1827,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -1952,6 +1982,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -2083,6 +2116,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -2214,6 +2250,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -2345,6 +2384,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -2476,6 +2518,9 @@
                         <height>24</height>
                        </size>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -2670,6 +2715,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -2804,6 +2852,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -2938,6 +2989,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -3072,6 +3126,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -3278,6 +3335,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -3424,6 +3484,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -3591,6 +3654,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -3737,6 +3803,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -3931,6 +4000,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -4065,6 +4137,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -4199,6 +4274,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -4333,6 +4411,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -4467,6 +4548,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -4613,6 +4697,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -4853,6 +4940,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -4987,6 +5077,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -5121,6 +5214,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -5255,6 +5351,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -5389,6 +5488,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -5535,6 +5637,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -5829,6 +5934,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -5975,6 +6083,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -6121,6 +6232,9 @@
                       <property name="checkable">
                        <bool>true</bool>
                       </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">bgAddCmd</string>
+                      </attribute>
                      </widget>
                     </item>
                    </layout>
@@ -7216,10 +7330,11 @@
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="bgPickBind"/>
   <buttongroup name="bgLibrary"/>
   <buttongroup name="bgSwitchInput"/>
   <buttongroup name="bgConfig"/>
-  <buttongroup name="bgPickBind"/>
   <buttongroup name="bgLoadInput"/>
+  <buttongroup name="bgAddCmd"/>
  </buttongroups>
 </ui>
