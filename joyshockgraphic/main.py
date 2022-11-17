@@ -214,8 +214,7 @@ class Main(QMainWindow, Ui_MainWindow):
         name, ok = QInputDialog.getText(self, "Rename command", "New command name:")
         if ok:
             db_cmds.set_command_data(self, self.curr_cmd, name=name)
-            command = self.correct_command_name(self.curr_cmd)
-            self.inputWidgets.findChild(QLabel, "l" + command).setText(name)
+            self.inputWidgets.findChild(QLabel, "l" + self.curr_cmd).setText(name)
 
     # This function shows/hides accel controls
     def show_accel(self, state: bool):
