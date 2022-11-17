@@ -4,11 +4,12 @@ import joyshockgraphic.database.cmds as db_cmds
 
 # This function sets a bind for the command based on the picked button
 def set_bind(self, bind: str):
-    if self.curr_cmd == "Chord":
-        db_cmds.set_command_data(self, self.curr_cmd, chord=bind)
+    if self.curr_cmd[-5:] == "Chord":
+        db_cmds.set_command_data(self, self.curr_cmd[:-5], chord=bind)
+        command = "pbChord"
     else:
         db_cmds.set_command_data(self, self.curr_cmd, bind=bind)
-    command = "pb" + self.correct_command_name(self.curr_cmd)
+        command = "pb" + self.correct_command_name(self.curr_cmd)
     for button in self.bgPickBind.buttons():
         if button.objectName() == command:
             button.setText(bind)

@@ -192,6 +192,8 @@ class Main(QMainWindow, Ui_MainWindow):
         obj_name = sender.objectName()
         e_command_before = self.curr_cmd
         self.curr_cmd = self.correct_command_name(obj_name[2:])
+        if self.curr_cmd == "Chord":
+            self.curr_cmd = e_command_before + self.curr_cmd
         dlg.bgKeyboard.buttonClicked.connect(partial(picker_input.bind_picked, self))
         dlg.bgMouse.buttonClicked.connect(partial(picker_input.bind_picked, self))
         dlg.bgGamepad.buttonClicked.connect(partial(picker_input.bind_picked, self))
