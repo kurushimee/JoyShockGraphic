@@ -193,6 +193,8 @@ class Main(QMainWindow, Ui_MainWindow):
         e_command_before = self.curr_cmd
         self.curr_cmd = self.correct_command_name(obj_name[2:])
         dlg.bgKeyboard.buttonClicked.connect(partial(picker_input.bind_picked, self))
+        dlg.bgMouse.buttonClicked.connect(partial(picker_input.bind_picked, self))
+        dlg.bgGamepad.buttonClicked.connect(partial(picker_input.bind_picked, self))
         dlg.pbAdvanced.clicked.connect(lambda: picker_input.advanced_dlg(self))
         dlg.exec_()
         self.curr_cmd = e_command_before
