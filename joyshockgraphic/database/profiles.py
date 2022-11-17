@@ -20,10 +20,11 @@ def create(self, display_name: str, file_name: str):
 
 # This function edits profile's information
 def edit(self, name_old: tuple, name_new: tuple):
-    # Rename profile's table
-    self.cur.execute(
-        f'ALTER TABLE "{name_old[1]}" RENAME TO "{name_new[1]}"'
-    )
+    if name_old[1] != name_new[1]:
+        # Rename profile's table
+        self.cur.execute(
+            f'ALTER TABLE "{name_old[1]}" RENAME TO "{name_new[1]}"'
+        )
     # Change the display name
     self.update(
         "profiles",
@@ -49,7 +50,7 @@ def delete(self, display_name: str):
     # Delete profile's table
     self.cur.execute(f'DROP TABLE "{file_name}"')
     # Delete profile's entry in the database
-    self.delete_profile(
+    self.delete(
         "profiles",
         f'display_name = "{display_name}" AND file_name = "{file_name}"',
     )
