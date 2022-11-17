@@ -96,6 +96,8 @@ def export(self, profile):
         for key, value in commands.items():
             value = " ".join(value)
             value = key if len(value) == 0 else f"{key} = {value}"
+            if value.islower():
+                value = f"#{value}"
             write += value + "\n"
 
         f.write(write)

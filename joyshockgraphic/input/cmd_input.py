@@ -86,7 +86,7 @@ def change_gyro_lineedit(self):
 # This function updates gyro settings based on QCheckBox values
 def change_gyro_checkbox(self):
     commands = {
-        "chAutoCalibrate": "AUTO_CALIBRATE",
+        "chAutoCalibrate": "AUTO_CALIBRATE_GYRO",
         "chAccel": "accel",
         "chVSens": "v_sens",
         "chMinVSens": "min_v_sens",
