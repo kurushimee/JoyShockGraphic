@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="mainTabs">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="libraryTab">
        <attribute name="title">
@@ -428,7 +428,7 @@
                 <property name="widgetResizable">
                  <bool>true</bool>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                <widget class="QWidget" name="saButtons">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
@@ -2561,13 +2561,13 @@
                 <property name="widgetResizable">
                  <bool>true</bool>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents">
+                <widget class="QWidget" name="saDpad">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>256</width>
+                   <height>293</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -3169,13 +3169,13 @@
                 <property name="widgetResizable">
                  <bool>true</bool>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_3">
+                <widget class="QWidget" name="saTriggers">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>304</width>
+                   <height>340</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -3846,12 +3846,12 @@
                 <property name="widgetResizable">
                  <bool>true</bool>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                <widget class="QWidget" name="saJoysticks">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>706</width>
+                   <width>269</width>
                    <height>902</height>
                   </rect>
                  </property>
@@ -5768,13 +5768,13 @@
                 <property name="widgetResizable">
                  <bool>true</bool>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_5">
+                <widget class="QWidget" name="saTouchpad">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>348</width>
+                   <height>236</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -6275,13 +6275,13 @@
                 <property name="widgetResizable">
                  <bool>true</bool>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_6">
+                <widget class="QWidget" name="saGyro">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>723</width>
-                   <height>813</height>
+                   <width>578</width>
+                   <height>479</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -7330,11 +7330,11 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="bgPickBind"/>
-  <buttongroup name="bgLibrary"/>
-  <buttongroup name="bgSwitchInput"/>
   <buttongroup name="bgConfig"/>
   <buttongroup name="bgLoadInput"/>
+  <buttongroup name="bgSwitchInput"/>
+  <buttongroup name="bgPickBind"/>
+  <buttongroup name="bgLibrary"/>
   <buttongroup name="bgAddCmd"/>
  </buttongroups>
 </ui>
