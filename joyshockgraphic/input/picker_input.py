@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QPushButton, QInputDialog
-from joyshockgraphic.database import cmds as db_cmds
+import joyshockgraphic.database.cmds as db_cmds
 
 
 # This function sets a bind for the command based on the picked button

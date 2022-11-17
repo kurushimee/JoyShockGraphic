@@ -1,4 +1,4 @@
-from joyshockgraphic.database import cmds as db_cmds
+import joyshockgraphic.database.cmds as db_cmds
 
 
 # This function updates joystick settings

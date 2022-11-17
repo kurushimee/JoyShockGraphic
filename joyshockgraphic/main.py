@@ -2,12 +2,12 @@ import sys
 from functools import partial
 
 from joyshockgraphic.database.controls import DbControls
+import joyshockgraphic.database.profiles as profiles
+import joyshockgraphic.database.cmds as db_cmds
+import joyshockgraphic.input.cmd_input as cmd_input
+import joyshockgraphic.input.picker_input as picker_input
 from joyshockgraphic.ui.main_window import Ui_MainWindow
-from joyshockgraphic.input import cmd_input
-from joyshockgraphic.input import picker_input
-from joyshockgraphic.database import profiles
-from joyshockgraphic.database import cmds as db_cmds
-from joyshockgraphic import init_interface
+import joyshockgraphic.init_interface as init_interface
 from PyQt5 import uic
 from PyQt5.QtWidgets import (
     QApplication,

@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QLabel
 
-from joyshockgraphic.database import cmds as db_cmds
+import joyshockgraphic.database.cmds as db_cmds
 
 
 # This function loads/reloads all existing profiles from the database

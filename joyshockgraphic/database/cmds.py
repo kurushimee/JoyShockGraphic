@@ -1,4 +1,4 @@
-from joyshockgraphic.database import profiles
+import joyshockgraphic.database.profiles as profiles
 
 
 # This function gets command's entry from the db
