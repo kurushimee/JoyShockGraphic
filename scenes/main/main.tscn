@@ -1,9 +1,109 @@
-[gd_scene format=3 uid="uid://bbjmdjgfsctma"]
+[gd_scene load_steps=7 format=3 uid="uid://bbjmdjgfsctma"]
 
-[node name="Main" type="Control"]
-layout_mode = 3
+[ext_resource type="Script" path="res://scenes/main/tabs/tabs.gd" id="1_fcl5v"]
+[ext_resource type="Texture2D" uid="uid://vlddtdgcrty0" path="res://assets/textures/icon.png" id="1_r3fie"]
+[ext_resource type="Texture2D" uid="uid://b7sj3d3s60qpv" path="res://assets/textures/ui/configs/new.svg" id="2_h57bi"]
+[ext_resource type="Texture2D" uid="uid://cvxvwm31h44ru" path="res://assets/textures/ui/configs/edit.svg" id="3_s62cn"]
+[ext_resource type="Texture2D" uid="uid://dm0qwca4wy7cw" path="res://assets/textures/ui/configs/delete.svg" id="4_wki82"]
+[ext_resource type="Script" path="res://scenes/main/tabs/configs/config_list.gd" id="5_0vw20"]
+
+[node name="Main" type="Node"]
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="Tabs" type="TabContainer" parent="Canvas"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fcl5v")
+
+[node name="Configs" type="Control" parent="Canvas/Tabs"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Canvas/Tabs/Configs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/Tabs/Configs/MarginContainer"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="Canvas/Tabs/Configs/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="NewButton" type="Button" parent="Canvas/Tabs/Configs/MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 20
+theme_override_font_sizes/font_size = 14
+text = "New..."
+icon = ExtResource("2_h57bi")
+
+[node name="EditButton" type="Button" parent="Canvas/Tabs/Configs/MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 20
+theme_override_font_sizes/font_size = 14
+disabled = true
+text = "Edit"
+icon = ExtResource("3_s62cn")
+
+[node name="DeleteButton" type="Button" parent="Canvas/Tabs/Configs/MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 20
+theme_override_font_sizes/font_size = 14
+disabled = true
+text = "Delete"
+icon = ExtResource("4_wki82")
+
+[node name="ConfigList" type="ItemList" parent="Canvas/Tabs/Configs/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("5_0vw20")
+
+[node name="Editor" type="Control" parent="Canvas/Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="About" type="Control" parent="Canvas/Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/Tabs/About"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -13.0
+offset_right = 65.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="Canvas/Tabs/About/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("1_r3fie")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AppNameLabel" type="Label" parent="Canvas/Tabs/About/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "JoyShockGraphic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="Canvas/Tabs/About/VBoxContainer"]
+layout_mode = 2
+text = "JSG meets Godot."
