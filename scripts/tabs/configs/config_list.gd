@@ -1,18 +1,17 @@
 extends ItemList
 
-const SEARCH_DIR := "/AutoLoad"
-var jsm_path: String
+const SEARCH_DIR := "\\GyroConfigs"
 
 var configs := []
 
 
-func _ready() -> void:
-	jsm_path = OS.get_executable_path().get_base_dir()
-	search_configs(jsm_path + SEARCH_DIR)
+func _on_jsm_path_set() -> void:
+	search_configs(%Settings.jsm_path + SEARCH_DIR)
 	init_list()
 
 
 func search_configs(path):
+	print("Searching for configs in: " + path)
 	var dir := DirAccess.open(path)
 	if dir:
 		dir.list_dir_begin()
@@ -26,9 +25,9 @@ func search_configs(path):
 
 			file_name = dir.get_next()
 	else:
-		print("An error occurred when trying to access the path.")
+		printerr("The config path doesn't exist: " + path)
 
 
 func init_list():
 	for config in configs:
-		print(config.get_basename())
+		add_item(config.get_basename())

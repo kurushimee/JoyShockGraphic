@@ -1,13 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbjmdjgfsctma"]
+[gd_scene load_steps=9 format=3 uid="uid://bbjmdjgfsctma"]
 
-[ext_resource type="Script" path="res://scenes/main/tabs/tabs.gd" id="1_fcl5v"]
-[ext_resource type="Texture2D" uid="uid://vlddtdgcrty0" path="res://assets/textures/icon.png" id="1_r3fie"]
-[ext_resource type="Texture2D" uid="uid://b7sj3d3s60qpv" path="res://assets/textures/ui/configs/new.svg" id="2_h57bi"]
-[ext_resource type="Texture2D" uid="uid://cvxvwm31h44ru" path="res://assets/textures/ui/configs/edit.svg" id="3_s62cn"]
-[ext_resource type="Texture2D" uid="uid://dm0qwca4wy7cw" path="res://assets/textures/ui/configs/delete.svg" id="4_wki82"]
-[ext_resource type="Script" path="res://scenes/main/tabs/configs/config_list.gd" id="5_0vw20"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_a6bjo"]
+[ext_resource type="Script" path="res://scripts/settings.gd" id="2_yf41e"]
+[ext_resource type="Script" path="res://scripts/tabs/tabs.gd" id="3_gskb4"]
+[ext_resource type="Texture2D" uid="uid://b7sj3d3s60qpv" path="res://assets/textures/ui/configs/new.svg" id="4_lhuin"]
+[ext_resource type="Texture2D" uid="uid://cvxvwm31h44ru" path="res://assets/textures/ui/configs/edit.svg" id="5_mkjoc"]
+[ext_resource type="Texture2D" uid="uid://dm0qwca4wy7cw" path="res://assets/textures/ui/configs/delete.svg" id="6_wcoc4"]
+[ext_resource type="Script" path="res://scripts/tabs/configs/config_list.gd" id="7_fip5f"]
+[ext_resource type="Texture2D" uid="uid://vlddtdgcrty0" path="res://assets/textures/icon.png" id="8_o6fyl"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_a6bjo")
+
+[node name="Settings" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_yf41e")
 
 [node name="Canvas" type="CanvasLayer" parent="."]
 
@@ -20,10 +27,12 @@ grow_vertical = 2
 
 [node name="Tabs" type="TabContainer" parent="Canvas/PanelContainer"]
 layout_mode = 2
-script = ExtResource("1_fcl5v")
+current_tab = 0
+script = ExtResource("3_gskb4")
 
 [node name="Configs" type="Control" parent="Canvas/PanelContainer/Tabs"]
 layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Canvas/PanelContainer/Tabs/Configs"]
 layout_mode = 1
@@ -48,7 +57,7 @@ layout_mode = 2
 theme_override_constants/icon_max_width = 20
 theme_override_font_sizes/font_size = 14
 text = "New..."
-icon = ExtResource("2_h57bi")
+icon = ExtResource("4_lhuin")
 
 [node name="EditButton" type="Button" parent="Canvas/PanelContainer/Tabs/Configs/MarginContainer/VBoxContainer/Buttons"]
 layout_mode = 2
@@ -56,7 +65,7 @@ theme_override_constants/icon_max_width = 20
 theme_override_font_sizes/font_size = 14
 disabled = true
 text = "Edit"
-icon = ExtResource("3_s62cn")
+icon = ExtResource("5_mkjoc")
 
 [node name="DeleteButton" type="Button" parent="Canvas/PanelContainer/Tabs/Configs/MarginContainer/VBoxContainer/Buttons"]
 layout_mode = 2
@@ -64,20 +73,22 @@ theme_override_constants/icon_max_width = 20
 theme_override_font_sizes/font_size = 14
 disabled = true
 text = "Delete"
-icon = ExtResource("4_wki82")
+icon = ExtResource("6_wcoc4")
 
 [node name="ConfigList" type="ItemList" parent="Canvas/PanelContainer/Tabs/Configs/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-script = ExtResource("5_0vw20")
+script = ExtResource("7_fip5f")
 
 [node name="Editor" type="Control" parent="Canvas/PanelContainer/Tabs"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="About" type="Control" parent="Canvas/PanelContainer/Tabs"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Canvas/PanelContainer/Tabs/About"]
 layout_mode = 1
@@ -96,7 +107,7 @@ grow_vertical = 2
 [node name="Icon" type="TextureRect" parent="Canvas/PanelContainer/Tabs/About/VBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("1_r3fie")
+texture = ExtResource("8_o6fyl")
 expand_mode = 1
 stretch_mode = 5
 
@@ -109,4 +120,18 @@ vertical_alignment = 1
 
 [node name="DescriptionLabel" type="Label" parent="Canvas/PanelContainer/Tabs/About/VBoxContainer"]
 layout_mode = 2
-text = "JSG meets Godot."
+text = "JoyShockGraphic is a GUI configurator for JoyShockMapper."
+
+[node name="JsmPathDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+position = Vector2i(0, 36)
+size = Vector2i(359, 211)
+popup_window = true
+ok_button_text = "Select Current Folder"
+mode_overrides_title = false
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[connection signal="jsm_path_set" from="." to="Canvas/PanelContainer/Tabs/Configs/MarginContainer/VBoxContainer/ConfigList" method="_on_jsm_path_set"]
+[connection signal="dir_selected" from="JsmPathDialog" to="." method="_on_path_selected"]
